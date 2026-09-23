@@ -6,7 +6,9 @@ This report was prepared with AI assistance from actual notebook outputs. The st
 
 ## Start with the evidence
 
-- [Executed starter notebook](starter_3000steps.ipynb) and [executed expanded notebook](expanded_3000steps.ipynb), with outputs retained.
+- [Executed starter notebook](starter_3000steps.ipynb) and [executed expanded notebook](expanded_3000steps.ipynb), with outputs retained. Both now include a final evidence-based explanation section.
+- If GitHub notebook preview stays loading: [complete starter notebook export](evidence/notebook_exports/starter.md) and [complete expanded notebook export](evidence/notebook_exports/expanded.md) preserve all cells and saved outputs in GitHub-readable Markdown, including the loss figures. These are reading backups; the notebooks remain the runnable artifacts.
+- [Criterion-by-criterion rubric audit](SUBMISSION_CHECKLIST.md).
 - [Detailed experiment comparison and all saved sample timelines](EXPERIMENT_COMPARISON.md).
 - [Actual chat transcript, recording, and launch instructions](evidence/README.md).
 - [Fixed 48-case suite](evals/language_evals.json) and [unchanged evaluation runner](run_evals.py).
@@ -266,7 +268,7 @@ Cosine similarity below uses all 64 dimensions of the starter embeddings, exclud
 - Before: bus (0.213), educator (0.203), helped (0.202), bank (0.201), risk (0.198).
 - After: shopper (0.983), buyer (0.980), subscriber (0.974), consumer (0.971), client (0.968).
 
-The neighbors reflect the restricted contexts in the teaching sentences, not human-defined semantic labels. To inspect visually, open [embedding-viewer.html](embedding-viewer.html) locally and load the desired checkpoint.json. PCA compresses 64 dimensions for display and can distort apparent distances; cosine neighbors use the full vectors. The viewer is not a chat interface.
+The neighbors reflect the restricted contexts in the teaching sentences, not human-defined semantic labels. To inspect visually, open [embedding-viewer.html](embedding-viewer.html) locally and load the desired checkpoint.json. PCA compresses 64 dimensions for display and can distort apparent distances; cosine neighbors use the full vectors. The viewer is not a chat interface. Automated opening of its local file was blocked by the browser file-URL policy, so the interactive viewer step needs a manual local check; the numeric vectors and neighbors above were verified from the saved checkpoint.
 
 ## Temperature: inference without retraining
 
@@ -371,7 +373,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements-tested.txt
 ```
 
-Windows users can substitute `.venv\Scripts\python.exe` for `.venv/bin/python`. For an interactive Jupyter interface, install `requirements-local.txt` as well; VS Code can select the same environment as its notebook kernel.
+For non-Mac systems, install `requirements-local.txt` rather than the Mac-specific pinned package list. Windows users can substitute `.venv\Scripts\python.exe` for `.venv/bin/python`. For an interactive Jupyter interface, install `requirements-local.txt` as well; VS Code can select the same environment as its notebook kernel.
 
 ### Run a fresh experiment without mixing corpora
 
@@ -427,7 +429,7 @@ A [second wording exploration](evidence/additional_phrasings/README.md) adds 20 
 
 ## Attribution and submission status
 
-Based on the [instructor's sample project](https://github.com/pepealonso95/custom-llm), source commit `9e04ddb6aacb8efcb790e70c62550ca55e0f2a75`. The pinned nanoGPT model comes from Karpathy's commit `3adf61e154c3fe3fca428ad6bc3818b27a3b8291`; see [nanoGPT license](NANOGPT_LICENSE). [Original starter README](TEACHER_README.md) is preserved. The local contribution consists of configured executed notebooks, original synthetic teaching text, evidence, reproduction helpers, and this analysis.
+Based on the [instructor's sample project](https://github.com/pepealonso95/custom-llm), source commit `9e04ddb6aacb8efcb790e70c62550ca55e0f2a75`. The pinned nanoGPT model comes from Karpathy's commit `3adf61e154c3fe3fca428ad6bc3818b27a3b8291`; see [nanoGPT license](NANOGPT_LICENSE). [Original starter README](TEACHER_README.md) is preserved. The local contribution consists of configured executed notebooks, original synthetic teaching text, evidence, reproduction helpers, and this analysis. The root custom_llm.ipynb is the unchanged instructor template; the two clearly linked executed notebooks above are the submitted experiments.
 
 The experimental evidence and reviewed reflection are published at [jennawang1121/class4-custom-llm](https://github.com/jennawang1121/class4-custom-llm). [Public-access checks](evidence/public_access_check.json) verified 17 downloads without authentication, including both executed notebooks, model files, result ZIPs and four eval result sets. The signed-out README and both loss plots rendered correctly. The GitHub notebook iframe remained loading during inspection; raw notebook files retain all outputs and can be opened locally. The repository URL still needs to be submitted through the course portal. The benchmark percentage is not the assignment grade.
 
