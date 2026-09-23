@@ -1,0 +1,119 @@
+{
+  "repository": "https://github.com/jennawang1121/class4-custom-llm",
+  "authentication": "No cookies or Authorization headers used",
+  "checks": [
+    {
+      "path": "README.md",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 33820
+    },
+    {
+      "path": "REFLECTION.md",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 3257
+    },
+    {
+      "path": "starter_3000steps.ipynb",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 66674,
+      "executed_code_cells": 12,
+      "saved_outputs": 20
+    },
+    {
+      "path": "expanded_3000steps.ipynb",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 67142,
+      "executed_code_cells": 12,
+      "saved_outputs": 20
+    },
+    {
+      "path": "evidence/chat_recording.html",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 2075
+    },
+    {
+      "path": "evidence/chat_transcript.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 1069
+    },
+    {
+      "path": "evals/language_evals.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 20289
+    },
+    {
+      "path": "llm_runs/20260922T000429_567209Z/training_curves.svg",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 794
+    },
+    {
+      "path": "llm_runs/20260922T000429_567209Z/model.pt",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 457163
+    },
+    {
+      "path": "llm_runs/20260922T000429_567209Z.zip",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 1107255
+    },
+    {
+      "path": "llm_runs/20260922T000429_567209Z/language_evals/untrained/eval_results.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 45462
+    },
+    {
+      "path": "llm_runs/20260922T000429_567209Z/language_evals/final/eval_results.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 39464
+    },
+    {
+      "path": "llm_runs/20260922T001305_992994Z/training_curves.svg",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 794
+    },
+    {
+      "path": "llm_runs/20260922T001305_992994Z/model.pt",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 483147
+    },
+    {
+      "path": "llm_runs/20260922T001305_992994Z.zip",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 1290994
+    },
+    {
+      "path": "llm_runs/20260922T001305_992994Z/language_evals/untrained/eval_results.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 44957
+    },
+    {
+      "path": "llm_runs/20260922T001305_992994Z/language_evals/final/eval_results.json",
+      "http_status": 200,
+      "matches_local": true,
+      "bytes": 38673
+    }
+  ],
+  "note": "Checks verify public availability and saved notebook outputs; GitHub notebook UI rendering is separate.",
+  "browser_checks": {
+    "signed_out_repository_page": true,
+    "readme_rendered": true,
+    "both_loss_images_loaded": true,
+    "expanded_notebook_preview": "GitHub page is public; embedded renderer remained blank/loading during inspection. Raw notebook download and all saved outputs verified."
+  }
+}

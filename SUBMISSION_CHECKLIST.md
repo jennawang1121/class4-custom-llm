@@ -11,10 +11,12 @@ This maps evidence to the rubric; it does not assign or predict a grade.
 ## Before submitting
 
 - Learning reflection completed; preserve the reviewed version.
-- Create/publish to the student's own public GitHub repository, not the instructor's origin remote. No publication has been performed.
+- Create/publish to the student's own public GitHub repository, not the instructor's origin remote. Published at https://github.com/jennawang1121/class4-custom-llm; raw files publicly verified.
 - Include the files in the prepared submission bundle; do not clear notebook outputs.
 - Signed out, open both executed notebooks, the SVG plots, CSV/JSON evidence, and chat files. Download/open the HTML recording for playback.
 - Confirm the model files and both complete results ZIPs are downloadable.
 - Submit the student's public repository URL through the course portal.
 
 Local verification found no missing or Git-ignored evidence links in the main reports. The .gitignore explicitly retains the selected run folders, ZIPs and teaching files while excluding environment files, the incomplete attempt, and extra reproduction runs.
+
+Public access checks are recorded in evidence/public_access_check.json. README and loss plots rendered signed out. GitHub notebook preview remained loading, while complete notebook downloads matched the local executed files. Portal submission is not yet performed.

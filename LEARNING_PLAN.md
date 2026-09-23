@@ -6,6 +6,6 @@ The original formal runs are preserved. Isolated reproduction commands prevent n
 
 Reflection: updated from the student’s learning conversation and approved wording in REFLECTION.md.
 
-Pending: publication to the student's public GitHub repository, signed-out link/notebook checks, and submission of the repository URL.
+Published: https://github.com/jennawang1121/class4-custom-llm . Public downloads, README and plots verified. GitHub notebook iframe preview remained loading; downloadable executed notebooks are intact. Pending: course portal submission and a later visual check of GitHub notebook preview.
 
 All tests, outputs, reports, and chat evidence remain outside corpus/. No score threshold is treated as an assignment-grade requirement.
