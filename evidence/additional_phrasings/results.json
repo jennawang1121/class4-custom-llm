@@ -1,0 +1,202 @@
+[
+  {
+    "group": "teacher_state",
+    "variant": "A",
+    "prompt": "today the teacher is",
+    "seed": 2026,
+    "temperature": 0.8,
+    "response": "walking to the bank now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "A",
+    "prompt": "today the teacher is",
+    "seed": 2027,
+    "temperature": 0.8,
+    "response": "walking to the store now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "A",
+    "prompt": "today the teacher is",
+    "seed": 2028,
+    "temperature": 0.8,
+    "response": "walking to the hospital now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "A",
+    "prompt": "today the teacher is",
+    "seed": 2029,
+    "temperature": 0.8,
+    "response": "walking to the market now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "A",
+    "prompt": "today the teacher is",
+    "seed": 2030,
+    "temperature": 0.8,
+    "response": "walking to the bank now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "B",
+    "prompt": "the teacher today is",
+    "seed": 2026,
+    "temperature": 0.8,
+    "response": "walking to the bank now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "B",
+    "prompt": "the teacher today is",
+    "seed": 2027,
+    "temperature": 0.8,
+    "response": "walking to the store now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "B",
+    "prompt": "the teacher today is",
+    "seed": 2028,
+    "temperature": 0.8,
+    "response": "walking to the hospital now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "B",
+    "prompt": "the teacher today is",
+    "seed": 2029,
+    "temperature": 0.8,
+    "response": "walking to the market now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "teacher_state",
+    "variant": "B",
+    "prompt": "the teacher today is",
+    "seed": 2030,
+    "temperature": 0.8,
+    "response": "walking to the bank at the hospital .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "A",
+    "prompt": "a pencil is inside the",
+    "seed": 2026,
+    "temperature": 0.8,
+    "response": "station today .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "A",
+    "prompt": "a pencil is inside the",
+    "seed": 2027,
+    "temperature": 0.8,
+    "response": "hospital now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "A",
+    "prompt": "a pencil is inside the",
+    "seed": 2028,
+    "temperature": 0.8,
+    "response": "box .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "A",
+    "prompt": "a pencil is inside the",
+    "seed": 2029,
+    "temperature": 0.8,
+    "response": "station today .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "A",
+    "prompt": "a pencil is inside the",
+    "seed": 2030,
+    "temperature": 0.8,
+    "response": "school today .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "B",
+    "prompt": "inside the basket is a",
+    "seed": 2026,
+    "temperature": 0.8,
+    "response": "basket .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "B",
+    "prompt": "inside the basket is a",
+    "seed": 2027,
+    "temperature": 0.8,
+    "response": "window now .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "B",
+    "prompt": "inside the basket is a",
+    "seed": 2028,
+    "temperature": 0.8,
+    "response": "box .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "B",
+    "prompt": "inside the basket is a",
+    "seed": 2029,
+    "temperature": 0.8,
+    "response": "box .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  },
+  {
+    "group": "object_location",
+    "variant": "B",
+    "prompt": "inside the basket is a",
+    "seed": 2030,
+    "temperature": 0.8,
+    "response": "box .",
+    "unknown_prompt_words": [],
+    "prompt_truncated": false
+  }
+]

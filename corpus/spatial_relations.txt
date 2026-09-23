@@ -1,0 +1,445 @@
+a basket contains a small cup .
+look inside a basket to find a cup .
+we placed a cup inside a basket .
+outside a basket sits a cup .
+a drawer contains a small cup .
+look inside a drawer to find a cup .
+we placed a cup inside a drawer .
+outside a drawer sits a cup .
+a bag contains a small cup .
+look inside a bag to find a cup .
+we placed a cup inside a bag .
+outside a bag sits a cup .
+a box contains a small cup .
+look inside a box to find a cup .
+we placed a cup inside a box .
+outside a box sits a cup .
+a cabinet contains a small cup .
+look inside a cabinet to find a cup .
+we placed a cup inside a cabinet .
+outside a cabinet sits a cup .
+a basket contains a small pencil .
+look inside a basket to find a pencil .
+we placed a pencil inside a basket .
+outside a basket sits a pencil .
+a drawer contains a small pencil .
+look inside a drawer to find a pencil .
+we placed a pencil inside a drawer .
+outside a drawer sits a pencil .
+a bag contains a small pencil .
+look inside a bag to find a pencil .
+we placed a pencil inside a bag .
+outside a bag sits a pencil .
+a box contains a small pencil .
+look inside a box to find a pencil .
+we placed a pencil inside a box .
+outside a box sits a pencil .
+a cabinet contains a small pencil .
+look inside a cabinet to find a pencil .
+we placed a pencil inside a cabinet .
+outside a cabinet sits a pencil .
+a basket contains a small toy .
+look inside a basket to find a toy .
+we placed a toy inside a basket .
+outside a basket sits a toy .
+a drawer contains a small toy .
+look inside a drawer to find a toy .
+we placed a toy inside a drawer .
+outside a drawer sits a toy .
+a bag contains a small toy .
+look inside a bag to find a toy .
+we placed a toy inside a bag .
+outside a bag sits a toy .
+a box contains a small toy .
+look inside a box to find a toy .
+we placed a toy inside a box .
+outside a box sits a toy .
+a cabinet contains a small toy .
+look inside a cabinet to find a toy .
+we placed a toy inside a cabinet .
+outside a cabinet sits a toy .
+a basket contains a small shoe .
+look inside a basket to find a shoe .
+we placed a shoe inside a basket .
+outside a basket sits a shoe .
+a drawer contains a small shoe .
+look inside a drawer to find a shoe .
+we placed a shoe inside a drawer .
+outside a drawer sits a shoe .
+a bag contains a small shoe .
+look inside a bag to find a shoe .
+we placed a shoe inside a bag .
+outside a bag sits a shoe .
+a box contains a small shoe .
+look inside a box to find a shoe .
+we placed a shoe inside a box .
+outside a box sits a shoe .
+a cabinet contains a small shoe .
+look inside a cabinet to find a shoe .
+we placed a shoe inside a cabinet .
+outside a cabinet sits a shoe .
+a basket contains a small coin .
+look inside a basket to find a coin .
+we placed a coin inside a basket .
+outside a basket sits a coin .
+a drawer contains a small coin .
+look inside a drawer to find a coin .
+we placed a coin inside a drawer .
+outside a drawer sits a coin .
+a bag contains a small coin .
+look inside a bag to find a coin .
+we placed a coin inside a bag .
+outside a bag sits a coin .
+a box contains a small coin .
+look inside a box to find a coin .
+we placed a coin inside a box .
+outside a box sits a coin .
+a cabinet contains a small coin .
+look inside a cabinet to find a coin .
+we placed a coin inside a cabinet .
+outside a cabinet sits a coin .
+a basket contains a small flower .
+look inside a basket to find a flower .
+we placed a flower inside a basket .
+outside a basket sits a flower .
+a drawer contains a small flower .
+look inside a drawer to find a flower .
+we placed a flower inside a drawer .
+outside a drawer sits a flower .
+a bag contains a small flower .
+look inside a bag to find a flower .
+we placed a flower inside a bag .
+outside a bag sits a flower .
+a box contains a small flower .
+look inside a box to find a flower .
+we placed a flower inside a box .
+outside a box sits a flower .
+a cabinet contains a small flower .
+look inside a cabinet to find a flower .
+we placed a flower inside a cabinet .
+outside a cabinet sits a flower .
+a basket contains a small plate .
+look inside a basket to find a plate .
+we placed a plate inside a basket .
+outside a basket sits a plate .
+a drawer contains a small plate .
+look inside a drawer to find a plate .
+we placed a plate inside a drawer .
+outside a drawer sits a plate .
+a bag contains a small plate .
+look inside a bag to find a plate .
+we placed a plate inside a bag .
+outside a bag sits a plate .
+a box contains a small plate .
+look inside a box to find a plate .
+we placed a plate inside a box .
+outside a box sits a plate .
+a cabinet contains a small plate .
+look inside a cabinet to find a plate .
+we placed a plate inside a cabinet .
+outside a cabinet sits a plate .
+a basket contains a small ball .
+look inside a basket to find a ball .
+we placed a ball inside a basket .
+outside a basket sits a ball .
+a drawer contains a small ball .
+look inside a drawer to find a ball .
+we placed a ball inside a drawer .
+outside a drawer sits a ball .
+a bag contains a small ball .
+look inside a bag to find a ball .
+we placed a ball inside a bag .
+outside a bag sits a ball .
+a box contains a small ball .
+look inside a box to find a ball .
+we placed a ball inside a box .
+outside a box sits a ball .
+a cabinet contains a small ball .
+look inside a cabinet to find a ball .
+we placed a ball inside a cabinet .
+outside a cabinet sits a ball .
+a basket contains a small book .
+look inside a basket to find a book .
+we placed a book inside a basket .
+outside a basket sits a book .
+a drawer contains a small book .
+look inside a drawer to find a book .
+we placed a book inside a drawer .
+outside a drawer sits a book .
+a bag contains a small book .
+look inside a bag to find a book .
+we placed a book inside a bag .
+outside a bag sits a book .
+a box contains a small book .
+look inside a box to find a book .
+we placed a book inside a box .
+outside a box sits a book .
+a cabinet contains a small book .
+look inside a cabinet to find a book .
+we placed a book inside a cabinet .
+outside a cabinet sits a book .
+a basket contains a small lamp .
+look inside a basket to find a lamp .
+we placed a lamp inside a basket .
+outside a basket sits a lamp .
+a drawer contains a small lamp .
+look inside a drawer to find a lamp .
+we placed a lamp inside a drawer .
+outside a drawer sits a lamp .
+a bag contains a small lamp .
+look inside a bag to find a lamp .
+we placed a lamp inside a bag .
+outside a bag sits a lamp .
+a box contains a small lamp .
+look inside a box to find a lamp .
+we placed a lamp inside a box .
+outside a box sits a lamp .
+a cabinet contains a small lamp .
+look inside a cabinet to find a lamp .
+we placed a lamp inside a cabinet .
+outside a cabinet sits a lamp .
+a picture hangs above a chair .
+below a picture stands a chair .
+looking up from a chair we see a picture above it .
+looking down from a picture we see a chair below it .
+a picture hangs above a table .
+below a picture stands a table .
+looking up from a table we see a picture above it .
+looking down from a picture we see a table below it .
+a picture hangs above a bed .
+below a picture stands a bed .
+looking up from a bed we see a picture above it .
+looking down from a picture we see a bed below it .
+a picture hangs above a desk .
+below a picture stands a desk .
+looking up from a desk we see a picture above it .
+looking down from a picture we see a desk below it .
+a picture hangs above a basket .
+below a picture stands a basket .
+looking up from a basket we see a picture above it .
+looking down from a picture we see a basket below it .
+a clock hangs above a chair .
+below a clock stands a chair .
+looking up from a chair we see a clock above it .
+looking down from a clock we see a chair below it .
+a clock hangs above a table .
+below a clock stands a table .
+looking up from a table we see a clock above it .
+looking down from a clock we see a table below it .
+a clock hangs above a bed .
+below a clock stands a bed .
+looking up from a bed we see a clock above it .
+looking down from a clock we see a bed below it .
+a clock hangs above a desk .
+below a clock stands a desk .
+looking up from a desk we see a clock above it .
+looking down from a clock we see a desk below it .
+a clock hangs above a basket .
+below a clock stands a basket .
+looking up from a basket we see a clock above it .
+looking down from a clock we see a basket below it .
+a shelf hangs above a chair .
+below a shelf stands a chair .
+looking up from a chair we see a shelf above it .
+looking down from a shelf we see a chair below it .
+a shelf hangs above a table .
+below a shelf stands a table .
+looking up from a table we see a shelf above it .
+looking down from a shelf we see a table below it .
+a shelf hangs above a bed .
+below a shelf stands a bed .
+looking up from a bed we see a shelf above it .
+looking down from a shelf we see a bed below it .
+a shelf hangs above a desk .
+below a shelf stands a desk .
+looking up from a desk we see a shelf above it .
+looking down from a shelf we see a desk below it .
+a shelf hangs above a basket .
+below a shelf stands a basket .
+looking up from a basket we see a shelf above it .
+looking down from a shelf we see a basket below it .
+a window hangs above a chair .
+below a window stands a chair .
+looking up from a chair we see a window above it .
+looking down from a window we see a chair below it .
+a window hangs above a table .
+below a window stands a table .
+looking up from a table we see a window above it .
+looking down from a window we see a table below it .
+a window hangs above a bed .
+below a window stands a bed .
+looking up from a bed we see a window above it .
+looking down from a window we see a bed below it .
+a window hangs above a desk .
+below a window stands a desk .
+looking up from a desk we see a window above it .
+looking down from a window we see a desk below it .
+a window hangs above a basket .
+below a window stands a basket .
+looking up from a basket we see a window above it .
+looking down from a window we see a basket below it .
+a lamp hangs above a chair .
+below a lamp stands a chair .
+looking up from a chair we see a lamp above it .
+looking down from a lamp we see a chair below it .
+a lamp hangs above a table .
+below a lamp stands a table .
+looking up from a table we see a lamp above it .
+looking down from a lamp we see a table below it .
+a lamp hangs above a bed .
+below a lamp stands a bed .
+looking up from a bed we see a lamp above it .
+looking down from a lamp we see a bed below it .
+a lamp hangs above a desk .
+below a lamp stands a desk .
+looking up from a desk we see a lamp above it .
+looking down from a lamp we see a desk below it .
+a lamp hangs above a basket .
+below a lamp stands a basket .
+looking up from a basket we see a lamp above it .
+looking down from a lamp we see a basket below it .
+a chair stands to the left of a door .
+from a chair look right to see a door .
+a chair stands to the right of a door .
+from a chair look left to see a door .
+a chair is beside a door .
+a chair stands to the left of a window .
+from a chair look right to see a window .
+a chair stands to the right of a window .
+from a chair look left to see a window .
+a chair is beside a window .
+a chair stands to the left of a desk .
+from a chair look right to see a desk .
+a chair stands to the right of a desk .
+from a chair look left to see a desk .
+a chair is beside a desk .
+a chair stands to the left of a shelf .
+from a chair look right to see a shelf .
+a chair stands to the right of a shelf .
+from a chair look left to see a shelf .
+a chair is beside a shelf .
+a chair stands to the left of a box .
+from a chair look right to see a box .
+a chair stands to the right of a box .
+from a chair look left to see a box .
+a chair is beside a box .
+a plant stands to the left of a door .
+from a plant look right to see a door .
+a plant stands to the right of a door .
+from a plant look left to see a door .
+a plant is beside a door .
+a plant stands to the left of a window .
+from a plant look right to see a window .
+a plant stands to the right of a window .
+from a plant look left to see a window .
+a plant is beside a window .
+a plant stands to the left of a desk .
+from a plant look right to see a desk .
+a plant stands to the right of a desk .
+from a plant look left to see a desk .
+a plant is beside a desk .
+a plant stands to the left of a shelf .
+from a plant look right to see a shelf .
+a plant stands to the right of a shelf .
+from a plant look left to see a shelf .
+a plant is beside a shelf .
+a plant stands to the left of a box .
+from a plant look right to see a box .
+a plant stands to the right of a box .
+from a plant look left to see a box .
+a plant is beside a box .
+a basket stands to the left of a door .
+from a basket look right to see a door .
+a basket stands to the right of a door .
+from a basket look left to see a door .
+a basket is beside a door .
+a basket stands to the left of a window .
+from a basket look right to see a window .
+a basket stands to the right of a window .
+from a basket look left to see a window .
+a basket is beside a window .
+a basket stands to the left of a desk .
+from a basket look right to see a desk .
+a basket stands to the right of a desk .
+from a basket look left to see a desk .
+a basket is beside a desk .
+a basket stands to the left of a shelf .
+from a basket look right to see a shelf .
+a basket stands to the right of a shelf .
+from a basket look left to see a shelf .
+a basket is beside a shelf .
+a basket stands to the left of a box .
+from a basket look right to see a box .
+a basket stands to the right of a box .
+from a basket look left to see a box .
+a basket is beside a box .
+a table stands to the left of a door .
+from a table look right to see a door .
+a table stands to the right of a door .
+from a table look left to see a door .
+a table is beside a door .
+a table stands to the left of a window .
+from a table look right to see a window .
+a table stands to the right of a window .
+from a table look left to see a window .
+a table is beside a window .
+a table stands to the left of a desk .
+from a table look right to see a desk .
+a table stands to the right of a desk .
+from a table look left to see a desk .
+a table is beside a desk .
+a table stands to the left of a shelf .
+from a table look right to see a shelf .
+a table stands to the right of a shelf .
+from a table look left to see a shelf .
+a table is beside a shelf .
+a table stands to the left of a box .
+from a table look right to see a box .
+a table stands to the right of a box .
+from a table look left to see a box .
+a table is beside a box .
+a cabinet stands to the left of a door .
+from a cabinet look right to see a door .
+a cabinet stands to the right of a door .
+from a cabinet look left to see a door .
+a cabinet is beside a door .
+a cabinet stands to the left of a window .
+from a cabinet look right to see a window .
+a cabinet stands to the right of a window .
+from a cabinet look left to see a window .
+a cabinet is beside a window .
+a cabinet stands to the left of a desk .
+from a cabinet look right to see a desk .
+a cabinet stands to the right of a desk .
+from a cabinet look left to see a desk .
+a cabinet is beside a desk .
+a cabinet stands to the left of a shelf .
+from a cabinet look right to see a shelf .
+a cabinet stands to the right of a shelf .
+from a cabinet look left to see a shelf .
+a cabinet is beside a shelf .
+a cabinet stands to the left of a box .
+from a cabinet look right to see a box .
+a cabinet stands to the right of a box .
+from a cabinet look left to see a box .
+a cabinet is beside a box .
+we walked north from the school .
+we walked south toward the school .
+one map shows the school to the north .
+another map shows the school to the south .
+we walked north from the garden .
+we walked south toward the garden .
+one map shows the garden to the north .
+another map shows the garden to the south .
+we walked north from the market .
+we walked south toward the market .
+one map shows the market to the north .
+another map shows the market to the south .
+we walked north from the hospital .
+we walked south toward the hospital .
+one map shows the hospital to the north .
+another map shows the hospital to the south .
+we walked north from the station .
+we walked south toward the station .
+one map shows the station to the north .
+another map shows the station to the south .

@@ -1,0 +1,21 @@
+group,variant,prompt,seed,temperature,response,unknown_prompt_words,prompt_truncated
+teacher_state,A,today the teacher is,2026,0.8,walking to the bank now .,[],False
+teacher_state,A,today the teacher is,2027,0.8,walking to the store now .,[],False
+teacher_state,A,today the teacher is,2028,0.8,walking to the hospital now .,[],False
+teacher_state,A,today the teacher is,2029,0.8,walking to the market now .,[],False
+teacher_state,A,today the teacher is,2030,0.8,walking to the bank now .,[],False
+teacher_state,B,the teacher today is,2026,0.8,walking to the bank now .,[],False
+teacher_state,B,the teacher today is,2027,0.8,walking to the store now .,[],False
+teacher_state,B,the teacher today is,2028,0.8,walking to the hospital now .,[],False
+teacher_state,B,the teacher today is,2029,0.8,walking to the market now .,[],False
+teacher_state,B,the teacher today is,2030,0.8,walking to the bank at the hospital .,[],False
+object_location,A,a pencil is inside the,2026,0.8,station today .,[],False
+object_location,A,a pencil is inside the,2027,0.8,hospital now .,[],False
+object_location,A,a pencil is inside the,2028,0.8,box .,[],False
+object_location,A,a pencil is inside the,2029,0.8,station today .,[],False
+object_location,A,a pencil is inside the,2030,0.8,school today .,[],False
+object_location,B,inside the basket is a,2026,0.8,basket .,[],False
+object_location,B,inside the basket is a,2027,0.8,window now .,[],False
+object_location,B,inside the basket is a,2028,0.8,box .,[],False
+object_location,B,inside the basket is a,2029,0.8,box .,[],False
+object_location,B,inside the basket is a,2030,0.8,box .,[],False

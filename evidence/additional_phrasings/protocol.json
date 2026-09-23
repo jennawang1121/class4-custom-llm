@@ -1,0 +1,28 @@
+{
+  "pairs": {
+    "teacher_state": [
+      "today the teacher is",
+      "the teacher today is"
+    ],
+    "object_location": [
+      "a pencil is inside the",
+      "inside the basket is a"
+    ]
+  },
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "temperature": 0.8,
+  "max_tokens": 24,
+  "model": "llm_runs/20260922T001305_992994Z/model.pt",
+  "prediction": "Teacher word-order changes may preserve continuation. Inverted location wording may produce different completions or reveal reliance on familiar templates.",
+  "limitations": [
+    "The teacher pair changes word order while retaining the same completion slot.",
+    "The location pair changes the open slot: A needs a container; B needs an object. Different output is expected and is not by itself a failure.",
+    "Five paired seeds per prompt are qualitative exploration, not a benchmark."
+  ]
+}

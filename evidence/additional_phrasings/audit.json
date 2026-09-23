@@ -1,0 +1,13 @@
+{
+  "model_identity": "c731332d0636cf076a4f366457b5b3313bb20453b9ae0334bdf8b8e47e2de2a4",
+  "weights_unchanged": true,
+  "protected_files_unchanged": true,
+  "file_hashes": {
+    "llm_runs/20260922T001305_992994Z/model.pt": "50db3d70f8ddfa2fa8f5396f7a208e441cefa75927e4a61fd75157fbae39e3d5",
+    "evals/language_evals.json": "e8affcd72841e3ed7da5c0b6b116327fe9f69c9abd66a1180d1d88ceaa3e17f7",
+    "corpus/grammar.txt": "1aa08435b20a5f458331375a216727ffdfb02c1f4e09206e70bf53889ab339e2",
+    "corpus/spatial_relations.txt": "c98be6e759ff881afd6b11c2b5b9f2bd418ac5d17b34d487978060f94d593827"
+  },
+  "total_responses": 20,
+  "fixed_eval_prefixes_not_used": true
+}

@@ -1,0 +1,66 @@
+{
+  "scope": "Current source files, saved setup/formal corpora and splits, vocabularies, and submission ZIP",
+  "source_files": {
+    "README.md": {
+      "ingested": false,
+      "sha256": "7a1079f4a586588393336acea085f62829e93bb5876196c8ddf249c5740ed507",
+      "reserved_prompt_matches": [],
+      "evaluation_metadata_markers": []
+    },
+    "grammar.txt": {
+      "ingested": true,
+      "sha256": "1aa08435b20a5f458331375a216727ffdfb02c1f4e09206e70bf53889ab339e2",
+      "reserved_prompt_matches": [],
+      "evaluation_metadata_markers": []
+    },
+    "spatial_relations.txt": {
+      "ingested": true,
+      "sha256": "c98be6e759ff881afd6b11c2b5b9f2bd418ac5d17b34d487978060f94d593827",
+      "reserved_prompt_matches": [],
+      "evaluation_metadata_markers": []
+    }
+  },
+  "runs": {
+    "setup": {
+      "corpus_matches_only_original_classroom_and_expected_teaching_files": true,
+      "reserved_prompt_matches": [],
+      "saved_split_exactly_reconstructed": true,
+      "vocabulary_exactly_reconstructed_from_training_only": true,
+      "imported_files": [],
+      "excluded_reserved_passages": 160,
+      "run_zip_corpus_matches": true
+    },
+    "starter": {
+      "corpus_matches_only_original_classroom_and_expected_teaching_files": true,
+      "reserved_prompt_matches": [],
+      "saved_split_exactly_reconstructed": true,
+      "vocabulary_exactly_reconstructed_from_training_only": true,
+      "imported_files": [],
+      "excluded_reserved_passages": 160,
+      "run_zip_corpus_matches": true
+    },
+    "expanded": {
+      "corpus_matches_only_original_classroom_and_expected_teaching_files": true,
+      "reserved_prompt_matches": [],
+      "saved_split_exactly_reconstructed": true,
+      "vocabulary_exactly_reconstructed_from_training_only": true,
+      "imported_files": [
+        "grammar.txt",
+        "spatial_relations.txt"
+      ],
+      "excluded_reserved_passages": 160,
+      "run_zip_corpus_matches": true
+    }
+  },
+  "issues": [],
+  "limitations": "Normalized exact matching is not a semantic leakage detector. Generator templates were also manually reviewed. Ordinary shared vocabulary and underlying facts are allowed.",
+  "submission_zip": {
+    "corpus_members": [
+      "class4-custom-llm/corpus/README.md",
+      "class4-custom-llm/corpus/grammar.txt",
+      "class4-custom-llm/corpus/spatial_relations.txt"
+    ],
+    "matches_audited_local_files": true
+  },
+  "manual_review": "Reviewed all extension generator templates: agreement/tense sentences and independent spatial descriptions; no answer-key lists, scored responses, or copied multi-sentence test stories. Shared ordinary words and grammar/spatial concepts are intentional teaching content."
+}

@@ -1,253 +1,433 @@
-# Building a Custom LLM with nanoGPT
+# Class 4: training and evaluating a tiny nanoGPT
 
-Class 4, Fall 26 · From Zero to AI Agents
+Two fresh nanoGPT models were trained on CPU for **3,000 steps at learning rate 0.0015**: first on the supplied classroom corpus, then on the classroom corpus plus original grammar and spatial-relation teaching text. The expanded model scored **28/48** on the unchanged public development tests, versus **21/48** for the trained starter. It still failed two spatial questions and could not score 18 other extension questions because of missing vocabulary. It is a narrow sentence-completion model, not a general chatbot.
 
-Train Karpathy's actual **nanoGPT transformer** from scratch and inspect its learned
-**word-token embeddings**. The classroom adaptation uses whole words and punctuation,
-a small sentence corpus, and an explanatory notebook. nanoGPT itself supports different
-tokenizers; changing the model name alone would not turn character tokens into words.
+This report was prepared with AI assistance from actual notebook outputs. The student selected the settings and extension categories. The [reflection](REFLECTION.md) uses simple English based on the student’s questions, explanations, and actual experiment results. It was revised with AI assistance and reviewed in the learning conversation.
 
-[Open in Colab](https://colab.research.google.com/github/pepealonso95/custom-llm/blob/main/custom_llm.ipynb)
-· [Assignment Google Doc](https://docs.google.com/document/d/1MQ3YQl2ywWZF7W5_l_91FiIp7pTYPO_3viI2JVapRcc/edit)
-· [Assignment text](ASSIGNMENT.md)
-· [3D embedding viewer](embedding-viewer.html)
+## Start with the evidence
 
-## Start here
+- [Executed starter notebook](starter_3000steps.ipynb) and [executed expanded notebook](expanded_3000steps.ipynb), with outputs retained.
+- [Detailed experiment comparison and all saved sample timelines](EXPERIMENT_COMPARISON.md).
+- [Actual chat transcript, recording, and launch instructions](evidence/README.md).
+- [Fixed 48-case suite](evals/language_evals.json) and [unchanged evaluation runner](run_evals.py).
+- [Original teaching sources and permissions](CORPUS_SOURCES.md), [grammar text](corpus/grammar.txt), [spatial text](corpus/spatial_relations.txt), and [reproducible generator](build_extension.py).
+- [Reproduction and evidence checks](evidence/verification.json).
 
-1. Open the notebook in Colab and save your own copy. The default CPU runtime is enough.
-2. Choose corpus, training steps and learning rate in section 1. Optionally add PDF, TXT or MD files to `corpus/` as explained below. Write your reasons and prediction.
-3. Try 10 steps for setup, then start with 3,000 steps and a learning rate of 0.001.
-4. Run All. Inspect the data, IDs, vectors, gradient, first weight update, probabilities, attention and samples.
-5. Inspect the 48 language evals in sections 6b and 8b. Keep every result, including unknown-word cases. Use section 10 to chat with your trained model and save at least three real interactions.
-6. Choose at least two extension categories, add different teaching examples to `corpus/`, and run a second experiment using the same tests.
-7. Download each results ZIP and the executed notebook separately after the final cell.
-8. Download embedding-viewer.html and open it locally. Use **Open your checkpoint** to load checkpoint.json from your extracted results ZIP.
-9. Explain the actual evidence in your own README and submit your public repository URL through the [course portal](https://submissions-portal-eight.vercel.app).
+## Choices, prediction, and outcomes
 
-Locally, install the dependencies in requirements.txt, then open custom_llm.ipynb
-with that Python environment. You can also run custom_llm.py directly after editing
-its settings. Colab generally already includes PyTorch. Setup installs pypdf if absent, creates `corpus/`, and downloads
-the pinned nanoGPT source if needed and verifies its hash; it downloads no model weights.
+**Corpus:** the first experiment used only the supplied synthetic classroom sentences. The second added grammar (agreement, pronouns, and tense) and spatial relations (containment, vertical/horizontal location, and direction). Both categories had no scorable cases under the starter vocabulary. The extension contains 576 unique grammar passages and 445 unique spatial passages, all original synthetic text drafted with AI assistance for this assignment. No private records or third-party documents were imported. The teaching files can be shared; no PDF extraction was needed, and the manifests report no import warnings.
 
-## Fixed language evals and chat
+Examples of teaching material include `last monday she walked to the garden .` and `below a clock stands a chair .`. The generator never reads the test suite, answer keys, or evaluation outputs. It provides varied independent teaching sentences rather than copied test stories or answer lists. Ordinary words and underlying concepts overlap with the public benchmark by design.
 
-The repository includes **48 synthetic language evals**: 16 reserved starter-pattern
-cases, 8 new phrasings using starter vocabulary, and 24 corpus-extension challenges
-covering grammar, opposites, negation, references, sequence, spatial relations,
-everyday knowledge, and categories/analogies.
+**Steps:** a 10-step setup run checked the pipeline; 3,000 updates were chosen for each formal run, following the instructor's suggested starting budget. A step is one batch-based parameter update, not a full pass through the corpus.
 
-**[Read the eval guide and examples](evals/README.md)** ·
-**[Inspect all 48 cases](evals/language_evals.json)**
+**Learning rate:** the student selected 0.0015 rather than the starter's 0.001. This is 50% larger, but no controlled learning-rate comparison was run, so no claim is made that it is better. Too-large updates can destabilize learning; too-small updates can make progress slow. The notebook uses warmup and cosine decay, so the actual learning rate varies. AdamW is not simply a fixed learning-rate-times-gradient update.
 
-Run All now saves complete untrained/final scores and free continuations, category
-breakdowns, unknown-word coverage, and corpus-separation evidence in the results ZIP.
-The answer key stays outside the model input and training data. Exact test prefixes
-are excluded from generated training sentences; imported files containing them are
-rejected. The original validation-loss panels remain a separate measurement.
+**Prediction, recorded before training:** loss might decrease, samples might resemble classroom sentences more closely, and broader teaching material might improve coverage and selected skills. Better four-choice scores or fluent text were not guaranteed. The prediction cells remain in both executed notebooks.
 
-Students first save a starter-corpus run, then add different teaching material for
-at least two extension categories and compare a second run. Keep all tests fixed.
-This is a public development benchmark, not an unseen generalization claim. A low
-score is valid evidence; there is no required pass rate.
+**Observed:** loss fell within both runs and the saved timeline samples became recognizable classroom-style sentences. The expanded run covered six additional tests; grammar scored 3/3, spatial relations 1/3. Some correct four-choice selections still had incoherent free continuations. These findings partly support the predictions, without establishing general language understanding.
 
-**How this affects the assignment grade:** the course's 10-point framework stays
-deliverable quality **4**, testing & evaluation **3**, and working result **3**.
-Complete, valid evals and a reasoned comparison of both corpus experiments are
-required evidence for the 3-point evaluation category. Submit all four untrained/
-trained result sets. Missing runs, leaked tests, or missing analysis reduce credit;
-a low model score alone does not. The runner's score is not an automatic grade.
-See [the full grading guidance](ASSIGNMENT.md#how-evals-affect-your-assignment-grade).
+**Controls:** both formal runs kept 3,000 steps, base learning rate 0.0015, seed 42, batch size 32, two blocks, four attention heads, 64-dimensional embeddings, 48-token context, the split procedure, scoring, and generation settings. Added text changed the vocabulary, data distribution, actual split/panel membership, and parameter count. The same seed does not imply identical initial weights when tensor sizes change. Loss values across different vocabularies/corpora are not directly comparable. Within each run, the loss panels and generation settings remained fixed.
 
-Notebook section 10 provides a working prompt/reply interface. Edit the prompt and
-rerun its cell; each message starts fresh. Terminal alternatives after training:
+## Four complete evaluations
 
-```sh
-python run_evals.py --model llm_runs/YOUR_RUN/model.pt --output results/my-evals
-python chat.py --model llm_runs/YOUR_RUN/model.pt --transcript results/my-chat.json
-```
+Only the prompt enters nanoGPT. The runner compares probabilities for four possible next words afterward: the correct word must be strictly highest; ties and incorrect choices score zero. Unknown prompt/choice words or excessive context make a case unscorable and give zero in the all-case metric. No failures are dropped. Scorable accuracy has a different denominator and must be read with coverage.
 
-Replace `YOUR_RUN` with your actual folder. `model.pt` contains the network;
-`checkpoint.json` serves the embedding viewer. No external model API is used.
-Keep `evals/`, results, and chat transcripts outside `corpus/`.
+Free continuations are generated separately (temperature 0.8, fixed per-case seed, up to 24 tokens); they are not the four-choice score. The suite is a **public development benchmark**, because its categories informed the extension. It is not an untouched test of unseen generalization.
 
-## What students should understand
+| Experiment | Stage | Correct / 48 | Scorable / 48 (coverage) | Scorable accuracy | Complete evidence |
+|---|---|---|---|---|---|
+|Starter|untrained|9/48 (18.75%)|24/48 (50.00%)|37.50%|[CSV](llm_runs/20260922T000429_567209Z/language_evals/untrained/eval_results.csv) · [JSON](llm_runs/20260922T000429_567209Z/language_evals/untrained/eval_results.json) · [summary](llm_runs/20260922T000429_567209Z/language_evals/untrained/eval_summary.json)|
+|Starter|final|21/48 (43.75%)|24/48 (50.00%)|87.50%|[CSV](llm_runs/20260922T000429_567209Z/language_evals/final/eval_results.csv) · [JSON](llm_runs/20260922T000429_567209Z/language_evals/final/eval_results.json) · [summary](llm_runs/20260922T000429_567209Z/language_evals/final/eval_summary.json)|
+|Expanded|untrained|5/48 (10.42%)|30/48 (62.50%)|16.67%|[CSV](llm_runs/20260922T001305_992994Z/language_evals/untrained/eval_results.csv) · [JSON](llm_runs/20260922T001305_992994Z/language_evals/untrained/eval_results.json) · [summary](llm_runs/20260922T001305_992994Z/language_evals/untrained/eval_summary.json)|
+|Expanded|final|28/48 (58.33%)|30/48 (62.50%)|93.33%|[CSV](llm_runs/20260922T001305_992994Z/language_evals/final/eval_results.csv) · [JSON](llm_runs/20260922T001305_992994Z/language_evals/final/eval_results.json) · [summary](llm_runs/20260922T001305_992994Z/language_evals/final/eval_summary.json)|
 
-| Idea | Evidence |
-|---|---|
-| Corpus and data | Imported text, short passages, deduplication and held-out passages |
-| Tokens and IDs | Words/punctuation mapped to arbitrary integer IDs |
-| Vectors and embeddings | One word's 64 numbers before/after, and the complete table |
-| Neural networks | Weighted sums, GELU, attention blocks, residuals and parameters |
-| Learning | Next-token loss, a real gradient and a parameter update |
-| Context and prediction | Trained causal attention and next-token probabilities |
-| Inference | Samples at three temperatures without weight updates |
+### Group and category results
 
-The story is **examples → predictions → loss → gradients → updates → changed predictions**.
-Character embeddings were already real embeddings in the original lab; the difference
-here is that the units represent words rather than letters. A coordinate is not a
-named concept, and a small language model is not a general chat assistant.
+Entries are **correct / scorable / total**. Zero scorable cases means missing coverage, not a measured 0% accuracy among scorable cases.
 
-## Corpus and tokenizer
+|Group|Starter before|Starter after|Expanded before|Expanded after|
+|---|---|---|---|---|
+|extend_corpus|0 / 0 / 24|0 / 0 / 24|0 / 6 / 24|4 / 6 / 24|
+|starter_patterns|6 / 16 / 16|16 / 16 / 16|4 / 16 / 16|16 / 16 / 16|
+|starter_transfer|3 / 8 / 8|5 / 8 / 8|1 / 8 / 8|8 / 8 / 8|
 
-The default is a **synthetic classroom corpus**, generated visibly in the notebook.
-It repeats sentence contexts around business, finance, food, transport, software,
-health and education words. No category labels or coordinates are given to the model
-or viewer. This deliberately controlled dataset makes distributional learning easy
-to inspect; the resulting similarities are not evidence of broad semantic knowledge.
+|Category|Starter before|Starter after|Expanded before|Expanded after|
+|---|---|---|---|---|
+|categories_and_analogies|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|domain_context|3 / 8 / 8|8 / 8 / 8|2 / 8 / 8|8 / 8 / 8|
+|domain_place|3 / 8 / 8|8 / 8 / 8|2 / 8 / 8|8 / 8 / 8|
+|everyday_knowledge|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|grammar|0 / 0 / 3|0 / 0 / 3|0 / 3 / 3|3 / 3 / 3|
+|negation|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|new_wording|3 / 8 / 8|5 / 8 / 8|1 / 8 / 8|8 / 8 / 8|
+|opposites|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|reference|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|sequence|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|0 / 0 / 3|
+|spatial_relations|0 / 0 / 3|0 / 0 / 3|0 / 3 / 3|1 / 3 / 3|
 
-- Reserve fixed language-eval prompts before the split or vocabulary building.
-- Split long text into passages of at most 47 word/punctuation tokens, normalize
-  case and spacing, deduplicate, then split passages 90/10.
-- Build the vocabulary only from training passages. Keep the 509 most frequent
-  word/punctuation types, plus UNK, BOS and EOS (512 total at most).
-- Reserve UNK for omitted/unknown tokens, BOS for passage start and EOS for passage end.
-- Report unknown-token rates for both training and held-out text.
-- Validation shares sentence templates with training. It tests new combinations
-  within those templates, not generalization to unseen domains or writing styles.
+The trained-model gain of seven correct cases comprises three additional starter-transfer successes plus four newly covered extension successes. The six new scorable cases are the three grammar and three spatial questions. Their expanded untrained score was 0/6, and trained score was 4/6; this is consistent with learning beyond vocabulary inclusion, but does not isolate a causal mechanism. Vocabulary size and initialization also changed between experiments.
 
-## Expand your corpus with files
+Concrete limitations in the expanded run:
 
-Put your files in **`corpus/` beside the notebook**, for example:
+- `lang_41` selected `inside` rather than `below`; `lang_42` selected `north` rather than `right`. Knowing the words did not guarantee inverse spatial reasoning.
+- `lang_26` correctly ranked `are` among four choices, but freely continued with `traffic discussion of course now .`.
+- `lang_40` ranked `book` highest among its four choices, but its free continuation was only `.`. Its probability for `book` was only about 0.0057% of the whole vocabulary. Being best among four candidates does not make a word likely overall.
+- The other 18 extension cases remain unscorable. No claim is made that this model has mastered those skills.
+
+The full case records linked above preserve prompts, choice probabilities, status, selected answers, and actual continuations, including failures.
+
+### Separation from training
+
+A fresh [corpus separation audit](evidence/corpus_separation_audit.json) reconstructed the saved training text, train/validation splits, and vocabulary from the permitted teaching sources. It found no added test prompts, answer-key material, or evaluation outputs, and confirmed the submission ZIP contains the same teaching files.
+
+The suite stayed in `evals/`; only teaching files were placed in `corpus/`. Test prompts, paired reference answers, scoring rules, evaluation outputs, and chat transcripts were never used to build the vocabulary or update weights. Each run excluded 160 generated classroom passages containing reserved test prefixes before splitting/vocabulary construction. Imported files passed the supplied normalized-prefix check. The suite's original file SHA-256 remains `e8affcd72841e3ed7da5c0b6b116327fe9f69c9abd66a1180d1d88ceaa3e17f7` (the runner also reports a separately computed canonical suite hash). Exact matching is not a semantic leakage detector; the added teaching text was also reviewed for copied test stories and answer lists.
+
+- Starter: [separation check](llm_runs/20260922T000429_567209Z/eval_separation.json) · [file manifest](llm_runs/20260922T000429_567209Z/corpus_manifest.json) · [training text](llm_runs/20260922T000429_567209Z/corpus.txt).
+- Expanded: [separation check](llm_runs/20260922T001305_992994Z/eval_separation.json) · [file manifest](llm_runs/20260922T001305_992994Z/corpus_manifest.json) · [training text](llm_runs/20260922T001305_992994Z/corpus.txt).
+
+## Run settings, data, and complete loss history
+
+The 90/10 split is by deduplicated passage, not source file. Training and held-out text share templates, so held-out loss tests combinations within this restricted distribution. It does not establish transfer to new domains or unseen templates. Vocabulary is built only from the training split, retaining at most 509 ordinary types plus UNK/BOS/EOS; neither formal run reached that limit.
+
+|Run|Completed steps|Training-loop seconds|Parameters|Vocabulary|Train / validation passages|Train / held-out UNK rate|
+|---|---|---|---|---|---|---|
+|Starter|3000|9.285453|111,872|136|4132 / 460|0.0% / 0.0%|
+|Expanded|3000|9.456151|118,016|232|5051 / 562|0.0% / 0.0%|
+
+Both used CPU on macOS 15.7.7 arm64, Python 3.12.14 and PyTorch 2.14.0. Timings are the original notebook training-loop measurements, not download/setup or total notebook wall time. Neither formal run was interrupted. An initial setup attempt failed before training because NumPy was absent; NumPy was installed and the notebook rerun from the beginning. The successful 10-step setup is [preserved separately](setup_10steps.ipynb); the incomplete attempt is excluded from submission evidence.
+
+### Starter loss
+
+Each fixed panel has **20 documents** (the notebook supports at most 20). Loss is averaged over non-padding next-token targets, not all corpus text. Every measured value is below.
+
+|Step|Training loss|Validation loss|
+|---|---|---|
+|0|4.926252841949463|4.927548408508301|
+|1500|0.6793705224990845|0.7186149954795837|
+|3000|0.6775152683258057|0.7051523923873901|
+
+![Starter loss](llm_runs/20260922T000429_567209Z/training_curves.svg)
+
+[history.json](llm_runs/20260922T000429_567209Z/history.json) · [training.csv](llm_runs/20260922T000429_567209Z/training.csv) · [config](llm_runs/20260922T000429_567209Z/config.json) · [training summary](llm_runs/20260922T000429_567209Z/training_summary.json) · [vocabulary report](llm_runs/20260922T000429_567209Z/vocabulary_report.json)
+
+### Expanded loss
+
+Each fixed panel has **20 documents** (the notebook supports at most 20). Loss is averaged over non-padding next-token targets, not all corpus text. Every measured value is below.
+
+|Step|Training loss|Validation loss|
+|---|---|---|
+|0|5.4747138023376465|5.467024326324463|
+|1500|0.7467778325080872|0.7647263407707214|
+|3000|0.7317943572998047|0.7450159192085266|
+
+![Expanded loss](llm_runs/20260922T001305_992994Z/training_curves.svg)
+
+[history.json](llm_runs/20260922T001305_992994Z/history.json) · [training.csv](llm_runs/20260922T001305_992994Z/training.csv) · [config](llm_runs/20260922T001305_992994Z/config.json) · [training summary](llm_runs/20260922T001305_992994Z/training_summary.json) · [vocabulary report](llm_runs/20260922T001305_992994Z/vocabulary_report.json)
+
+## Untrained, halfway, and final samples
+
+Every saved sample is included below, including garbled text. Each stage uses BOS, sampling seed 2026, temperature 0.8, four samples, and a 32-token limit. This sample timeline differs from the 24-token evaluation continuations.
+
+### Starter: step 0
+
+[Complete sample file](llm_runs/20260922T000429_567209Z/samples/step_0000.txt)
 
 ```text
-custom_llm.ipynb
-corpus/
-  report.pdf
-  notes.txt
-  research/
-    summary.md
+pear professor bond doctor course harvest team physician journey checking buyer delivery traffic report the lecturer item offering and system <UNK> taste recommended mentioned bus question customer at mortgage nurse in instructor
+kitchen purchase journey product question discussion journey service . nurse local
+compared and purchase update mortgage question loan taste in market treatment learned another item bicycle product bicycle focused data and dentist recommended mango apple taxi bicycle delivery peach quality update student lesson
+important hospital juice patient return recommended deposit tutor returned understand kitchen student design ordered hospital treatment important package traffic with yesterday investment important of mentioned store ordered mortgage nurse shopper the station
 ```
 
-1. **Locally:** add files to that folder. Subfolders and uppercase extensions work too.
-2. **In Colab:** run sections 1 and 2 once to create `/content/corpus`. In the left
-   Files sidebar, refresh and upload your files into that folder. Opening the notebook
-   from GitHub does not copy the repository's folders or your local files into Colab.
-3. Keep `CORPUS = "classroom"` to add the files to the teaching sentences. Use
-   `CORPUS = "folder"` to train only on your files. Folder-only mode needs at least
-   100 distinct extracted passages. `CORPUS_FOLDER` can point to another local folder.
-4. **Run All from the top.** Section 3 reports the imported filenames, previews,
-   passage counts and extraction warnings. Check that the expected text is present.
-5. After training, download the new results ZIP and load its `checkpoint.json` in the
-   embedding viewer. Adding files alone does not update the model or viewer: this is
-   training from scratch, not a document search system.
+### Starter: step 1500
 
-PDFs must contain extractable text. Scans need OCR first; encrypted, unreadable and
-entirely textless files stop the run with the filename and a useful error. PDFs with
-some textless pages produce warnings. Inspect previews and `corpus.txt`, especially
-for tables, columns or headers whose extraction order can be confusing. TXT and MD
-must use UTF-8. Markdown is read as plain text; links and code are not fetched or run.
+[Complete sample file](llm_runs/20260922T000429_567209Z/samples/step_1500.txt)
 
-Long text is split automatically, not truncated, with sentence/line boundaries kept
-when possible. There is no overlap between chunks. The 90/10 split is by deduplicated
-**passage, not original file**: parts of one source file can appear in both sets.
-This does not measure generalization to entirely unseen source documents.
+```text
+our school has a question about the new educator and lesson .
+a review of risk helped us understand the different deposit .
+we learned about the important website during a discussion of data .
+our school has a question about the different instructor and course .
+```
 
-Larger vocabularies no longer cause rejection. Tokens outside the 509 retained types
-become UNK, as do token strings longer than 128 characters. Inspect
-`vocabulary_report.json` and the printed coverage rates; a large, varied collection
-can lose much of its detail in this deliberately small vocabulary. The notebook warns
-above 5% unknown tokens. Start with focused, related text, not an entire library.
+### Starter: step 3000
 
-`corpus_manifest.json` records filenames, hashes, previews, warnings, added passages
-and duplicate counts. Limits: 50 supported files, 25 MB each, 100 MB total, 200 pages
-per PDF and 2 million extracted characters per file. Hidden files, symbolic links,
-unsupported formats and the root `corpus/README.md` instructions are ignored.
+[Complete sample file](llm_runs/20260922T000429_567209Z/samples/step_3000.txt)
 
-**Sharing:** added source files in `corpus/` are Git-ignored, but the results ZIP,
-executed notebook and trained model can still expose their content. The ZIP includes
-extracted text, filenames/hashes and weights. Use material you have permission to use
-and share; review every artifact before publishing. Colab uploads disappear when its
-runtime storage is reset. See [the folder instructions](corpus/README.md).
+```text
+our school has a question about the new educator and lesson .
+a review of risk helped us understand the different deposit .
+the report about the nurse explains the health in detail .
+the consumer compared the offering after checking the price .
+```
 
-## The actual nanoGPT model
+### Expanded: step 0
 
-[nanogpt_model.py](nanogpt_model.py) is an unchanged copy of Karpathy's
-[model.py at commit 3adf61e](https://github.com/karpathy/nanoGPT/blob/3adf61e154c3fe3fca428ad6bc3818b27a3b8291/model.py).
-Its [MIT license](NANOGPT_LICENSE) is included.
+[Complete sample file](llm_runs/20260922T001305_992994Z/samples/step_0000.txt)
 
-The classroom configuration uses 2 blocks, 4 heads, 64-dimensional token/position
-embeddings, a 48-token context, LayerNorm, GELU, residual connections and tied
-input/output embeddings. PyTorch handles autograd; batched AdamW replaces the old
-handwritten scalar training loop. Word tokenization and the teaching/evaluation/export
-helpers are classroom additions, not claims about nanoGPT's default tokenizer.
+```text
+harvest design learned book lecturer update orange update review review order bag south during cabinet the child educator in <BOS> today map merchandise explains today toward delivery book tutor book report beside
+looking platform walks update left played was farmer harvest child package talked service garden up every walks course product left was they cabinet picture dog below fruit drawer purchase juice small coin
+rested offering below shelf plant walked looking nurse map new teachers were learning product map window of walks instructor consumer garden delivery report explains course farmer client car orange i mortgage product
+design program children system professor surgeon now system it north application toward update another chair from sits chair drivers he ruth surgeon last security platform patient juice at are apple reviewed therapist
+```
 
-The upstream repository now labels nanoGPT deprecated in favor of nanochat.
-We deliberately pin nanoGPT here because this assignment is about its compact,
-inspectable GPT implementation, not adopting a production training stack.
+### Expanded: step 1500
 
-## Viewer
+[Complete sample file](llm_runs/20260922T001305_992994Z/samples/step_1500.txt)
 
-Open the single offline HTML file. It bundles the reference model's **actual recorded
-initial and final token lookup embeddings**. Drag to rotate, scroll or use buttons to
-zoom, and select a word from the menu or click a dot. Scroll the vector panel for all
-64 coordinates. Selected words and their three closest neighbors are labeled.
+```text
+today the bank focused on payment and the local credit .
+today the office focused on data and the local system .
+today the kitchen focused on juice and the important orange .
+today the market focused on delivery and the important merchandise .
+```
 
-Both states share a PCA center, basis and scale. The default projection retains
-40.9% of pooled variance, so proximity in 3D can distort the full space. Neighbor
-rankings use cosine similarity across all 64 coordinates. Movement lines connect
-endpoints, not intermediate training trajectories. These are token lookup embeddings,
-not position embeddings or context-dependent representations after attention.
+### Expanded: step 3000
 
-Load your own checkpoint.json to see your actual run, including its saved initial
-table. Files stay on your device. Legacy character checkpoints remain supported;
-when no initial table is present, before/after comparison is disabled.
+[Complete sample file](llm_runs/20260922T001305_992994Z/samples/step_3000.txt)
 
-## Measured language-eval run
+```text
+today the bank focused on payment and the local investment .
+today the office focused on security and the local system .
+today the hospital focused on patient and the important doctor .
+the important subscriber was mentioned in the service report yesterday .
+```
 
-The revised notebook was executed with 3,000 steps: **16/16 starter-pattern cases**
-and **4/8 new-wording cases** passed. All 24 extension cases lacked the required
-vocabulary. Complete untrained/final outputs and an actual three-prompt terminal
-transcript are in [the language-eval reference](examples/language-evals/README.md).
-These are measured teaching examples, not a required student score.
+The untrained samples are mostly disconnected words. Halfway and final samples largely use the supplied classroom templates. Some samples are unchanged across stages; the complete timeline above preserves this. Plausible template text is narrower evidence than broad language understanding.
 
-## Historical reference run
+## How learning works, using recorded values
 
-The historical reference notebook below was executed with 3,000 steps and learning rate 0.001,
-before the separate language-eval suite was added. Its numbers are not results for
-the new suite or the new reserved-prompt corpus.
-It learned 136 word/punctuation/special-token vectors. A separate 10-step setup run
-also completed. These are fixed panels of 20 documents per split, not full-corpus loss.
+A **corpus** is the teaching text. A **token** is the unit processed by this notebook: a whole word or punctuation mark after normalization. A token ID is an arbitrary lookup index. A **vector** is an ordered list of numbers; an **embedding** is a trainable vector assigned to a token. Its coordinates are not pre-labeled human concepts.
 
-| Step | Training panel loss | Validation panel loss |
-|---|---:|---:|
-| 0 | 4.9238 | 4.9247 |
-| 1500 | 0.6929 | 0.7113 |
-| 3000 | 0.6956 | 0.7057 |
+In the starter run, `customer` maps to **ID 28**, which selects a row of **64 numbers**. In the expanded vocabulary it maps to **ID 50**, illustrating that IDs depend on the vocabulary and are not meanings. Each ID stays fixed within its own run. [Starter tokenization](llm_runs/20260922T000429_567209Z/tokenization.json), [expanded tokenization](llm_runs/20260922T001305_992994Z/tokenization.json).
 
-Final examples include “our school has a question about the new educator and lesson .”
-and “the consumer compared the merchandise after checking the price .”
-The measured nearest neighbors of customer are client, buyer and subscriber.
-Their similar designed contexts explain this result; it does not prove general understanding.
+The starter's complete recorded `customer` vectors are shown below (rounded to nine decimal places; the inspection JSON retains full precision).
 
-Inspect [the executed notebook](examples/custom_llm.executed.ipynb),
-[complete reference evidence](examples/reference/), and
-[results ZIP](examples/reference.zip). Use your own outputs in your submission.
+**embedding_before (64 coordinates):**
 
-## Results and longer training
+```text
+-0.057591915, -0.004809953, 0.042631887, 0.019338956, 0.015643112, -0.028824365, 0.025609056, 0.000052454
+0.024706816, 0.020691765, 0.007369017, -0.033089615, -0.053547867, -0.005742930, -0.024166763, -0.014716119
+0.004685706, -0.010454268, -0.008381076, -0.018258560, -0.020133700, 0.005098642, -0.010916502, -0.012633352
+0.028389625, -0.002631223, -0.004071926, 0.013641920, -0.009891724, -0.016717626, 0.001906079, -0.001453504
+0.016026523, -0.005674875, -0.000672348, -0.001290727, -0.007319473, -0.000930707, 0.001507625, -0.004976639
+-0.028987018, 0.018092988, -0.007348014, -0.005440254, 0.015641203, -0.004543506, 0.041567937, 0.052355435
+0.022642685, -0.015414278, -0.025121203, -0.006797463, 0.029352751, -0.002533680, 0.029801227, -0.022797002
+-0.030237909, 0.006436788, 0.050490811, 0.007490998, -0.010722861, 0.024737332, -0.014468740, 0.013235915
+```
 
-Every run saves config.json, corpus.txt, corpus_manifest.json, vocabulary_report.json,
-split.json, tokenization.json, inspection.json,
-history.json, training.csv, training_summary.json, training_curves.svg, the sample
-timeline, temperature_comparison.json, checkpoint.json and model.pt. It also saves
-model_untrained.pt, eval_separation.json, language_eval_comparison.json, and complete
-language_evals/untrained and language_evals/final folders. The chat cell adds
-chat_transcript.json and refreshes the ZIP.
+**embedding_after (64 coordinates):**
 
-- **checkpoint.json:** token labels and initial/final embedding tables for the viewer.
-- **model.pt:** all network weights and model settings for inference.
-- Neither includes the complete optimizer/random state for exact training resume.
-- For the required corpus-extension experiment, keep the original results and train
-  a fresh model with your added teaching examples.
-- To train longer, set TRAINING_STEPS to 5000 or 10000 and Run All from the top.
-  Compare validation loss and samples. More steps can overfit and are not required.
-- Interrupted training can be followed by the remaining save cells. Other failures
-  require correcting the cause; do not assume a complete ZIP was saved.
+```text
+0.027679948, -0.029153936, 0.140851974, 0.148320183, 0.061166734, 0.066308074, 0.171408191, 0.049818415
+-0.067805350, -0.003911192, 0.052914146, -0.070505589, -0.045772001, -0.014890255, -0.137181520, -0.039631102
+-0.182766303, -0.166018531, -0.016975679, -0.038197204, -0.095464863, 0.032952219, -0.078541316, 0.012205401
+0.001340303, -0.072483256, 0.127457470, -0.055964880, 0.053609062, -0.153659269, -0.081742890, 0.083740108
+-0.056837745, 0.145162806, 0.086735852, -0.024371011, 0.038787279, -0.154155895, 0.118365958, -0.028139861
+0.145180732, -0.028214030, -0.134522662, 0.023568243, -0.016124114, -0.092494503, 0.006635461, 0.046019055
+0.005363967, -0.179476008, 0.010172208, -0.127456605, -0.005834099, 0.073494978, 0.114161521, 0.052926540
+0.080297485, 0.001453290, 0.037701964, 0.075109355, 0.150374547, -0.027490210, 0.088820629, -0.073004447
+```
 
-Use [STUDENT_README.md](STUDENT_README.md) to organize your explanation.
-The [historical microgpt lab](legacy/README.md) is preserved separately; its results
-must not be presented as results of this word-token model.
+A neural network combines many learned weights: token/position embeddings, attention projections, and feed-forward transformations, with nonlinear GELU operations, normalization, and residual connections. Its final scores become a probability distribution via softmax. Attention mixes information from earlier tokens and the current token; the causal mask blocks future positions so the model cannot peek at the word it must predict. The notebook's recorded first-head attention is one part of the actual computation, not a universal explanation of the model.
 
-For maintainers: run python3 build_embedding_viewer.py to refresh the bundled
-reference vectors, then node test_embedding_viewer.cjs to verify PCA, similarities,
-checkpoint consistency and import validation. Run python3 test_corpus.py to check
-real PDF/TXT/MD extraction, long-text chunking, nested files and useful failure messages.
+For next-token learning, the loss penalizes low probability on the observed next word. PyTorch backpropagation computes **gradients**: how the current loss would locally change if a parameter changed slightly. AdamW uses them, its running statistics, weight decay, and the learning-rate schedule to update weights. The embedding is one set of these trainable parameters.
+
+### One real gradient and first update
+
+|Run / customer coordinate 0|Before|Gradient (before clipping)|Actual first-step learning rate|After|Change|
+|---|---|---|---|---|---|
+|Starter|-0.057591915130615234|0.0006925869965925813|1.5e-05|-0.05760690197348595|-1.49868428707e-05|
+|Expanded|0.0056657949462533|-0.002263699658215046|1.5e-05|0.005680793896317482|1.49989500642e-05|
+
+Warmup makes the first update use **0.000015**, although the configured base rate is 0.0015. In the starter example the recorded gradient is positive and this coordinate decreases slightly. That is one actual update, distinct from the much larger net change after 3,000 steps. The gradient is recorded before gradient clipping; the code clips the overall norm before AdamW updates. These values should not be interpreted as a simple SGD calculation.
+
+### A next-token probability change
+
+For the same prefix `the customer`, in the starter run:
+
+|Candidate|Before training|After training|
+|---|---|---|
+|reviewed|0.711145%|17.718221%|
+|compared|0.620728%|15.728493%|
+|customer|1.600694%|0.008334%|
+
+These changes come from the whole trained network, not just one embedding coordinate. Generation samples a token from the distribution, appends it to the context, and repeats until EOS or the output limit. A rising correct-word probability can reduce loss without changing which of four candidates ranks first; this helps explain why loss and benchmark accuracy need not move together.
+
+- [Starter: full vectors, gradients, probabilities, and attention](llm_runs/20260922T000429_567209Z/inspection.json) · [viewer checkpoint](llm_runs/20260922T000429_567209Z/checkpoint.json).
+- [Expanded: full vectors, gradients, probabilities, and attention](llm_runs/20260922T001305_992994Z/inspection.json) · [viewer checkpoint](llm_runs/20260922T001305_992994Z/checkpoint.json).
+
+### Embedding neighbors
+
+Cosine similarity below uses all 64 dimensions of the starter embeddings, excludes the token itself, and was computed from the saved checkpoint. It is not a test score.
+
+- Before: bus (0.213), educator (0.203), helped (0.202), bank (0.201), risk (0.198).
+- After: shopper (0.983), buyer (0.980), subscriber (0.974), consumer (0.971), client (0.968).
+
+The neighbors reflect the restricted contexts in the teaching sentences, not human-defined semantic labels. To inspect visually, open [embedding-viewer.html](embedding-viewer.html) locally and load the desired checkpoint.json. PCA compresses 64 dimensions for display and can distort apparent distances; cosine neighbors use the full vectors. The viewer is not a chat interface.
+
+## Temperature: inference without retraining
+
+Temperature divides output scores before softmax. Lower temperature concentrates probability on favored tokens; higher temperature flattens it. It changes sampling, not vocabulary or learned weights. The notebook resets sampling seed 2026 and starts at BOS for each temperature; all saved samples follow.
+
+### Starter
+
+[Full temperature comparison](llm_runs/20260922T000429_567209Z/temperature_comparison.json)
+
+**Temperature 0.3:**
+
+```text
+our school has a question about the new educator and lesson .
+a review of risk helped us understand the different investment .
+the report about the nurse explains the health in detail .
+the local consumer was mentioned in the purchase report yesterday .
+```
+
+**Temperature 0.8:**
+
+```text
+our school has a question about the new educator and lesson .
+a review of risk helped us understand the different deposit .
+the report about the nurse explains the health in detail .
+the consumer compared the offering after checking the price .
+```
+
+**Temperature 1.2:**
+
+```text
+our school has a question about the new educator and lesson .
+a review of risk helped us understand the different deposit .
+the report about the nurse explains the health in detail .
+the consumer compared the offering after checking the price .
+```
+
+### Expanded
+
+[Full temperature comparison](llm_runs/20260922T001305_992994Z/temperature_comparison.json)
+
+**Temperature 0.3:**
+
+```text
+today the bank focused on risk and the local investment .
+a review of travel helped us understand the local train .
+today the hospital focused on patient and the important doctor .
+the important subscriber was mentioned in the service report yesterday .
+```
+
+**Temperature 0.8:**
+
+```text
+today the bank focused on payment and the local investment .
+today the office focused on security and the local system .
+today the hospital focused on patient and the important doctor .
+the important subscriber was mentioned in the service report yesterday .
+```
+
+**Temperature 1.2:**
+
+```text
+today the bank focused on payment and the local investment .
+today the office focused on data and the local system .
+today the hospital focused on patient and the important doctor .
+today the market focused on delivery and the important merchandise .
+```
+
+In the starter run, all four samples at 0.8 and 1.2 are identical: increasing temperature does not guarantee a visible change in a small sample. At 0.3 the second sentence uses investment rather than deposit. In the expanded run, the second sample shifts between travel/train, security/system, and data/system as temperature changes. These are observations of four seeded samples per setting, not a statistical quality comparison.
+
+## Working chat interface
+
+The unchanged [chat.py](chat.py) loads the trained expanded `model.pt` and saved vocabulary. [Transcript JSON](evidence/chat_transcript.json), [terminal text](evidence/chat_terminal.txt), [HTML recording player](evidence/chat_recording.html), and [raw terminal recording](evidence/chat_session.cast) document three actual interactions. Download/open the HTML locally to replay it; GitHub displays its source rather than running it. The recording is playback, not a live model interface.
+
+Run: `llm_runs/20260922T001305_992994Z`. Model SHA-256 identity: `c731332d0636cf076a4f366457b5b3313bb20453b9ae0334bdf8b8e47e2de2a4`. Prompts were entered automatically into the actual terminal interface, and responses came from nanoGPT.
+
+**Prompt:** `the customer`
+
+**Actual response:** compared the package after checking the price .
+
+Unknown prompt tokens: none.
+
+**Prompt:** `last monday she`
+
+**Actual response:** walked to the store .
+
+Unknown prompt tokens: none.
+
+**Prompt:** `Can you explain quantum computing?`
+
+**Actual response:** store has a question about the different shopper and the local buyer and the different shopper and the support with another subscriber and the
+
+Unknown prompt tokens: ?, can, computing, explain, quantum, you.
+
+Each prompt starts fresh; there is no conversation memory. The interface uses a 48-token context, reports truncation/unknown words, uses temperature 0.8, and generates up to 24 tokens. Chat never retrains the model or writes into the corpus. The first two examples fit familiar patterns, while the quantum-computing question produces an unrelated classroom fragment with all prompt tokens unknown.
+
+## Reproduce and launch
+
+From the project folder, create an isolated environment. `requirements-tested.txt` records the exact package versions used on the reported Mac; `requirements-local.txt` provides the teacher's dependency ranges plus the missing NumPy dependency and notebook execution tools for other platforms.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-tested.txt
+```
+
+Windows users can substitute `.venv\Scripts\python.exe` for `.venv/bin/python`. For an interactive Jupyter interface, install `requirements-local.txt` as well; VS Code can select the same environment as its notebook kernel.
+
+### Run a fresh experiment without mixing corpora
+
+```sh
+.venv/bin/python reproduce.py starter
+.venv/bin/python reproduce.py expanded
+```
+
+[reproduce.py](reproduce.py) creates a new directory under `reproductions/`, copies the fixed helpers and tests, and runs a fresh notebook there. The starter gets an empty corpus folder; the expanded run gets the two teaching files. This preserves the original executed evidence. Do not simply rerun the starter notebook beside the now-populated corpus folder: classroom mode includes that folder's files.
+
+To prepare files for interactive Jupyter/VS Code without training automatically:
+
+```sh
+.venv/bin/python reproduce.py starter --prepare-only
+.venv/bin/python reproduce.py expanded --prepare-only
+```
+
+Open the newly printed `custom_llm.ipynb` path and run all cells with the Python environment above. Source notebooks and saved evidence remain unchanged. For Colab, upload the prepared notebook and companion helpers/tests, and only the expanded teaching files for the expanded run; save both the executed notebook and results ZIP before ending the temporary session.
+
+### Rerun the four evaluations on saved weights
+
+Choose fresh output directories if preserving previous rerun evidence.
+
+```sh
+.venv/bin/python run_evals.py --model llm_runs/20260922T000429_567209Z/model_untrained.pt --stage untrained --output results/starter-untrained-check
+.venv/bin/python run_evals.py --model llm_runs/20260922T000429_567209Z/model.pt --output results/starter-final-check
+.venv/bin/python run_evals.py --model llm_runs/20260922T001305_992994Z/model_untrained.pt --stage untrained --output results/expanded-untrained-check
+.venv/bin/python run_evals.py --model llm_runs/20260922T001305_992994Z/model.pt --output results/expanded-final-check
+```
+
+### Start the real chat interface
+
+```sh
+.venv/bin/python chat.py --model llm_runs/20260922T001305_992994Z/model.pt --transcript evidence/my_new_chat.json
+```
+
+Enter text at `You:` and type `/quit` to exit. Use a new transcript filename each time. The complete saved model is included in the linked run directory and ZIP; `checkpoint.json` only serves the embedding viewer. Neither file is an exact training-resume checkpoint.
+
+- [Starter full results ZIP](llm_runs/20260922T000429_567209Z.zip) · [trained weights](llm_runs/20260922T000429_567209Z/model.pt) · [untrained weights](llm_runs/20260922T000429_567209Z/model_untrained.pt).
+- [Expanded full results ZIP](llm_runs/20260922T001305_992994Z.zip) · [trained weights](llm_runs/20260922T001305_992994Z/model.pt) · [untrained weights](llm_runs/20260922T001305_992994Z/model_untrained.pt).
+
+## Limitation and proposed next experiment
+
+The expanded model still fails two inverse spatial questions even though their words are known. A next experiment could introduce varied multi-clause spatial descriptions, balanced across directions, using new objects and wording rather than test stories. Keep the training budget fixed and report coverage, all-case/scorable scores, and unrestricted continuations separately. Improvement is uncertain. Additional untouched tests would be needed to claim unseen generalization.
+
+## Additional inference-only exploration
+
+We also compared two word orders at temperature 0.8 and temperatures 0.3/0.8/1.2 for `the customer`, using the same five seeds per condition. All 25 continuations are preserved in the [additional exploration report](evidence/additional_exploration/README.md).
+
+The two word orders produced identical paired responses in all five cases, though both end with `to the`, so this is only a narrow stability observation. At seed 2026, raising temperature changed the shopping continuation to `was quiet yesterday .`, still a coherent sentence. Distinct full responses numbered 5, 4 and 4 across temperatures: small samples need not show increasing diversity. No weights, vocabulary, teaching text, or fixed test cases changed.
+
+A [second wording exploration](evidence/additional_phrasings/README.md) adds 20 responses. The teacher word-order pair matched in 4/5 paired samples. The location prompts changed the completion slot, so they are reported as a broader qualitative exploration rather than a controlled paraphrase test. All 45 additional continuations are retained; no extra benchmark accuracy is claimed.
+
+## Attribution and submission status
+
+Based on the [instructor's sample project](https://github.com/pepealonso95/custom-llm), source commit `9e04ddb6aacb8efcb790e70c62550ca55e0f2a75`. The pinned nanoGPT model comes from Karpathy's commit `3adf61e154c3fe3fca428ad6bc3818b27a3b8291`; see [nanoGPT license](NANOGPT_LICENSE). [Original starter README](TEACHER_README.md) is preserved. The local contribution consists of configured executed notebooks, original synthetic teaching text, evidence, reproduction helpers, and this analysis.
+
+The experimental evidence and reviewed reflection are assembled. Before submission, verify notebooks, plots and downloads in the public repository without signing in, then submit the repository URL through the course portal. The benchmark percentage is not the assignment grade.
+

@@ -1,0 +1,26 @@
+experiment,prompt,temperature,seed,response,unknown_prompt_words,prompt_truncated
+phrasing,last monday she walked to the,0.8,2026,station .,[],False
+phrasing,last monday she walked to the,0.8,2027,hospital .,[],False
+phrasing,last monday she walked to the,0.8,2028,store .,[],False
+phrasing,last monday she walked to the,0.8,2029,store .,[],False
+phrasing,last monday she walked to the,0.8,2030,school .,[],False
+phrasing,she walked last monday to the,0.8,2026,station .,[],False
+phrasing,she walked last monday to the,0.8,2027,hospital .,[],False
+phrasing,she walked last monday to the,0.8,2028,store .,[],False
+phrasing,she walked last monday to the,0.8,2029,store .,[],False
+phrasing,she walked last monday to the,0.8,2030,school .,[],False
+temperature,the customer,0.3,2026,recommended the package after checking the price .,[],False
+temperature,the customer,0.3,2027,ordered the offering after checking the price .,[],False
+temperature,the customer,0.3,2028,recommended the merchandise after checking the price .,[],False
+temperature,the customer,0.3,2029,selected the offering after checking the price .,[],False
+temperature,the customer,0.3,2030,selected the product after checking the price .,[],False
+temperature,the customer,0.8,2026,compared the package after checking the price .,[],False
+temperature,the customer,0.8,2027,ordered the offering after checking the price .,[],False
+temperature,the customer,0.8,2028,recommended the merchandise after checking the price .,[],False
+temperature,the customer,0.8,2029,ordered the offering after checking the price .,[],False
+temperature,the customer,0.8,2030,selected the product after checking the price .,[],False
+temperature,the customer,1.2,2026,was quiet yesterday .,[],False
+temperature,the customer,1.2,2027,ordered the offering after checking the price .,[],False
+temperature,the customer,1.2,2028,recommended the merchandise after checking the price .,[],False
+temperature,the customer,1.2,2029,ordered the offering after checking the price .,[],False
+temperature,the customer,1.2,2030,selected the product after checking the price .,[],False

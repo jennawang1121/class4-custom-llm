@@ -1,0 +1,65 @@
+{
+  "suite_file_unchanged": true,
+  "case_records": 192,
+  "notebooks": {
+    "starter_3000steps.ipynb": {
+      "executed_code_cells": 12,
+      "errors": 0
+    },
+    "expanded_3000steps.ipynb": {
+      "executed_code_cells": 12,
+      "errors": 0
+    }
+  },
+  "saved_model_reruns": {
+    "starter-untrained": {
+      "cases": 48,
+      "identical_per_case_results": true
+    },
+    "starter-final": {
+      "cases": 48,
+      "identical_per_case_results": true
+    },
+    "expanded-untrained": {
+      "cases": 48,
+      "identical_per_case_results": true
+    },
+    "expanded-final": {
+      "cases": 48,
+      "identical_per_case_results": true
+    }
+  },
+  "isolated_reproductions": {
+    "starter": {
+      "directory": "reproductions/starter_20260922T002655_024081Z",
+      "completed_steps": 3000,
+      "matches_original": {
+        "history.json": true,
+        "inspection.json": true,
+        "language_eval_comparison.json": true
+      },
+      "imported_teaching_files": 0
+    },
+    "expanded": {
+      "directory": "reproductions/expanded_20260922T002653_403660Z",
+      "completed_steps": 3000,
+      "matches_original": {
+        "history.json": true,
+        "inspection.json": true,
+        "language_eval_comparison.json": true
+      },
+      "imported_teaching_files": 2
+    }
+  },
+  "chat": {
+    "actual_turns": 3,
+    "model_identity_matches": true,
+    "terminal_recording_contains_all_prompts_and_replies": true
+  },
+  "public_repository_verified": false,
+  "student_reflection_complete": true,
+  "links": {
+    "missing": [],
+    "ignored_by_git": []
+  }
+}

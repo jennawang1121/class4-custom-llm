@@ -1,0 +1,34 @@
+{
+  "model": "llm_runs/20260922T001305_992994Z/model.pt",
+  "seeds": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030
+  ],
+  "max_tokens": 24,
+  "fresh_context_per_prompt": true,
+  "phrasing": {
+    "prompts": [
+      "last monday she walked to the",
+      "she walked last monday to the"
+    ],
+    "temperature": 0.8,
+    "intent": "Same subject, past walking event and destination slot; reposition last monday."
+  },
+  "temperature": {
+    "prompt": "the customer",
+    "values": [
+      0.3,
+      0.8,
+      1.2
+    ]
+  },
+  "limitations": [
+    "Two word orders can change token positions and local context as well as familiarity.",
+    "Five seeds per condition are exploratory, not an accuracy benchmark.",
+    "Unique outputs and word counts measure diversity, not correctness."
+  ],
+  "prediction": "Word order may affect continuation despite known words. Higher temperature may increase variation but can also preserve the same output or generate less coherent text."
+}

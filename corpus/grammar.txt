@@ -1,0 +1,576 @@
+a bird is ready today .
+birds are ready today .
+a bird was ready yesterday .
+birds were ready yesterday .
+a bird is quiet today .
+birds are quiet today .
+a bird was quiet yesterday .
+birds were quiet yesterday .
+a bird is happy today .
+birds are happy today .
+a bird was happy yesterday .
+birds were happy yesterday .
+a bird is outside today .
+birds are outside today .
+a bird was outside yesterday .
+birds were outside yesterday .
+a bird is inside today .
+birds are inside today .
+a bird was inside yesterday .
+birds were inside yesterday .
+a bird is near the school today .
+birds are near the school today .
+a bird was near the school yesterday .
+birds were near the school yesterday .
+a bird is beside the garden today .
+birds are beside the garden today .
+a bird was beside the garden yesterday .
+birds were beside the garden yesterday .
+a bird is at the station today .
+birds are at the station today .
+a bird was at the station yesterday .
+birds were at the station yesterday .
+a dog is ready today .
+dogs are ready today .
+a dog was ready yesterday .
+dogs were ready yesterday .
+a dog is quiet today .
+dogs are quiet today .
+a dog was quiet yesterday .
+dogs were quiet yesterday .
+a dog is happy today .
+dogs are happy today .
+a dog was happy yesterday .
+dogs were happy yesterday .
+a dog is outside today .
+dogs are outside today .
+a dog was outside yesterday .
+dogs were outside yesterday .
+a dog is inside today .
+dogs are inside today .
+a dog was inside yesterday .
+dogs were inside yesterday .
+a dog is near the school today .
+dogs are near the school today .
+a dog was near the school yesterday .
+dogs were near the school yesterday .
+a dog is beside the garden today .
+dogs are beside the garden today .
+a dog was beside the garden yesterday .
+dogs were beside the garden yesterday .
+a dog is at the station today .
+dogs are at the station today .
+a dog was at the station yesterday .
+dogs were at the station yesterday .
+a teacher is ready today .
+teachers are ready today .
+a teacher was ready yesterday .
+teachers were ready yesterday .
+a teacher is quiet today .
+teachers are quiet today .
+a teacher was quiet yesterday .
+teachers were quiet yesterday .
+a teacher is happy today .
+teachers are happy today .
+a teacher was happy yesterday .
+teachers were happy yesterday .
+a teacher is outside today .
+teachers are outside today .
+a teacher was outside yesterday .
+teachers were outside yesterday .
+a teacher is inside today .
+teachers are inside today .
+a teacher was inside yesterday .
+teachers were inside yesterday .
+a teacher is near the school today .
+teachers are near the school today .
+a teacher was near the school yesterday .
+teachers were near the school yesterday .
+a teacher is beside the garden today .
+teachers are beside the garden today .
+a teacher was beside the garden yesterday .
+teachers were beside the garden yesterday .
+a teacher is at the station today .
+teachers are at the station today .
+a teacher was at the station yesterday .
+teachers were at the station yesterday .
+a driver is ready today .
+drivers are ready today .
+a driver was ready yesterday .
+drivers were ready yesterday .
+a driver is quiet today .
+drivers are quiet today .
+a driver was quiet yesterday .
+drivers were quiet yesterday .
+a driver is happy today .
+drivers are happy today .
+a driver was happy yesterday .
+drivers were happy yesterday .
+a driver is outside today .
+drivers are outside today .
+a driver was outside yesterday .
+drivers were outside yesterday .
+a driver is inside today .
+drivers are inside today .
+a driver was inside yesterday .
+drivers were inside yesterday .
+a driver is near the school today .
+drivers are near the school today .
+a driver was near the school yesterday .
+drivers were near the school yesterday .
+a driver is beside the garden today .
+drivers are beside the garden today .
+a driver was beside the garden yesterday .
+drivers were beside the garden yesterday .
+a driver is at the station today .
+drivers are at the station today .
+a driver was at the station yesterday .
+drivers were at the station yesterday .
+a farmer is ready today .
+farmers are ready today .
+a farmer was ready yesterday .
+farmers were ready yesterday .
+a farmer is quiet today .
+farmers are quiet today .
+a farmer was quiet yesterday .
+farmers were quiet yesterday .
+a farmer is happy today .
+farmers are happy today .
+a farmer was happy yesterday .
+farmers were happy yesterday .
+a farmer is outside today .
+farmers are outside today .
+a farmer was outside yesterday .
+farmers were outside yesterday .
+a farmer is inside today .
+farmers are inside today .
+a farmer was inside yesterday .
+farmers were inside yesterday .
+a farmer is near the school today .
+farmers are near the school today .
+a farmer was near the school yesterday .
+farmers were near the school yesterday .
+a farmer is beside the garden today .
+farmers are beside the garden today .
+a farmer was beside the garden yesterday .
+farmers were beside the garden yesterday .
+a farmer is at the station today .
+farmers are at the station today .
+a farmer was at the station yesterday .
+farmers were at the station yesterday .
+a child is ready today .
+children are ready today .
+a child was ready yesterday .
+children were ready yesterday .
+a child is quiet today .
+children are quiet today .
+a child was quiet yesterday .
+children were quiet yesterday .
+a child is happy today .
+children are happy today .
+a child was happy yesterday .
+children were happy yesterday .
+a child is outside today .
+children are outside today .
+a child was outside yesterday .
+children were outside yesterday .
+a child is inside today .
+children are inside today .
+a child was inside yesterday .
+children were inside yesterday .
+a child is near the school today .
+children are near the school today .
+a child was near the school yesterday .
+children were near the school yesterday .
+a child is beside the garden today .
+children are beside the garden today .
+a child was beside the garden yesterday .
+children were beside the garden yesterday .
+a child is at the station today .
+children are at the station today .
+a child was at the station yesterday .
+children were at the station yesterday .
+one student is ready today .
+students are ready today .
+one student was ready yesterday .
+students were ready yesterday .
+one student is quiet today .
+students are quiet today .
+one student was quiet yesterday .
+students were quiet yesterday .
+one student is happy today .
+students are happy today .
+one student was happy yesterday .
+students were happy yesterday .
+one student is outside today .
+students are outside today .
+one student was outside yesterday .
+students were outside yesterday .
+one student is inside today .
+students are inside today .
+one student was inside yesterday .
+students were inside yesterday .
+one student is near the school today .
+students are near the school today .
+one student was near the school yesterday .
+students were near the school yesterday .
+one student is beside the garden today .
+students are beside the garden today .
+one student was beside the garden yesterday .
+students were beside the garden yesterday .
+one student is at the station today .
+students are at the station today .
+one student was at the station yesterday .
+students were at the station yesterday .
+one nurse is ready today .
+nurses are ready today .
+one nurse was ready yesterday .
+nurses were ready yesterday .
+one nurse is quiet today .
+nurses are quiet today .
+one nurse was quiet yesterday .
+nurses were quiet yesterday .
+one nurse is happy today .
+nurses are happy today .
+one nurse was happy yesterday .
+nurses were happy yesterday .
+one nurse is outside today .
+nurses are outside today .
+one nurse was outside yesterday .
+nurses were outside yesterday .
+one nurse is inside today .
+nurses are inside today .
+one nurse was inside yesterday .
+nurses were inside yesterday .
+one nurse is near the school today .
+nurses are near the school today .
+one nurse was near the school yesterday .
+nurses were near the school yesterday .
+one nurse is beside the garden today .
+nurses are beside the garden today .
+one nurse was beside the garden yesterday .
+nurses were beside the garden yesterday .
+one nurse is at the station today .
+nurses are at the station today .
+one nurse was at the station yesterday .
+nurses were at the station yesterday .
+i am ready today .
+we are ready today .
+she is ready today .
+he was ready yesterday .
+i am quiet today .
+we are quiet today .
+she is quiet today .
+he was quiet yesterday .
+i am happy today .
+we are happy today .
+she is happy today .
+he was happy yesterday .
+i am outside today .
+we are outside today .
+she is outside today .
+he was outside yesterday .
+i am inside today .
+we are inside today .
+she is inside today .
+he was inside yesterday .
+i am near the school today .
+we are near the school today .
+she is near the school today .
+he was near the school yesterday .
+i am beside the garden today .
+we are beside the garden today .
+she is beside the garden today .
+he was beside the garden yesterday .
+i am at the station today .
+we are at the station today .
+she is at the station today .
+he was at the station yesterday .
+every morning he walks to the school .
+last monday he walked to the school .
+he is walking to the school now .
+every morning she walks to the school .
+last monday she walked to the school .
+she is walking to the school now .
+every morning the teacher walks to the school .
+last monday the teacher walked to the school .
+the teacher is walking to the school now .
+every morning the driver walks to the school .
+last monday the driver walked to the school .
+the driver is walking to the school now .
+every morning the farmer walks to the school .
+last monday the farmer walked to the school .
+the farmer is walking to the school now .
+every morning the nurse walks to the school .
+last monday the nurse walked to the school .
+the nurse is walking to the school now .
+every morning we walk to the school .
+we walked to the school yesterday .
+we are walking to the school now .
+every morning they walk to the school .
+they walked to the school yesterday .
+they are walking to the school now .
+every morning students walk to the school .
+students walked to the school yesterday .
+students are walking to the school now .
+every morning dogs walk to the school .
+dogs walked to the school yesterday .
+dogs are walking to the school now .
+every morning he walks to the market .
+last monday he walked to the market .
+he is walking to the market now .
+every morning she walks to the market .
+last monday she walked to the market .
+she is walking to the market now .
+every morning the teacher walks to the market .
+last monday the teacher walked to the market .
+the teacher is walking to the market now .
+every morning the driver walks to the market .
+last monday the driver walked to the market .
+the driver is walking to the market now .
+every morning the farmer walks to the market .
+last monday the farmer walked to the market .
+the farmer is walking to the market now .
+every morning the nurse walks to the market .
+last monday the nurse walked to the market .
+the nurse is walking to the market now .
+every morning we walk to the market .
+we walked to the market yesterday .
+we are walking to the market now .
+every morning they walk to the market .
+they walked to the market yesterday .
+they are walking to the market now .
+every morning students walk to the market .
+students walked to the market yesterday .
+students are walking to the market now .
+every morning dogs walk to the market .
+dogs walked to the market yesterday .
+dogs are walking to the market now .
+every morning he walks to the station .
+last monday he walked to the station .
+he is walking to the station now .
+every morning she walks to the station .
+last monday she walked to the station .
+she is walking to the station now .
+every morning the teacher walks to the station .
+last monday the teacher walked to the station .
+the teacher is walking to the station now .
+every morning the driver walks to the station .
+last monday the driver walked to the station .
+the driver is walking to the station now .
+every morning the farmer walks to the station .
+last monday the farmer walked to the station .
+the farmer is walking to the station now .
+every morning the nurse walks to the station .
+last monday the nurse walked to the station .
+the nurse is walking to the station now .
+every morning we walk to the station .
+we walked to the station yesterday .
+we are walking to the station now .
+every morning they walk to the station .
+they walked to the station yesterday .
+they are walking to the station now .
+every morning students walk to the station .
+students walked to the station yesterday .
+students are walking to the station now .
+every morning dogs walk to the station .
+dogs walked to the station yesterday .
+dogs are walking to the station now .
+every morning he walks to the garden .
+last monday he walked to the garden .
+he is walking to the garden now .
+every morning she walks to the garden .
+last monday she walked to the garden .
+she is walking to the garden now .
+every morning the teacher walks to the garden .
+last monday the teacher walked to the garden .
+the teacher is walking to the garden now .
+every morning the driver walks to the garden .
+last monday the driver walked to the garden .
+the driver is walking to the garden now .
+every morning the farmer walks to the garden .
+last monday the farmer walked to the garden .
+the farmer is walking to the garden now .
+every morning the nurse walks to the garden .
+last monday the nurse walked to the garden .
+the nurse is walking to the garden now .
+every morning we walk to the garden .
+we walked to the garden yesterday .
+we are walking to the garden now .
+every morning they walk to the garden .
+they walked to the garden yesterday .
+they are walking to the garden now .
+every morning students walk to the garden .
+students walked to the garden yesterday .
+students are walking to the garden now .
+every morning dogs walk to the garden .
+dogs walked to the garden yesterday .
+dogs are walking to the garden now .
+every morning he walks to the hospital .
+last monday he walked to the hospital .
+he is walking to the hospital now .
+every morning she walks to the hospital .
+last monday she walked to the hospital .
+she is walking to the hospital now .
+every morning the teacher walks to the hospital .
+last monday the teacher walked to the hospital .
+the teacher is walking to the hospital now .
+every morning the driver walks to the hospital .
+last monday the driver walked to the hospital .
+the driver is walking to the hospital now .
+every morning the farmer walks to the hospital .
+last monday the farmer walked to the hospital .
+the farmer is walking to the hospital now .
+every morning the nurse walks to the hospital .
+last monday the nurse walked to the hospital .
+the nurse is walking to the hospital now .
+every morning we walk to the hospital .
+we walked to the hospital yesterday .
+we are walking to the hospital now .
+every morning they walk to the hospital .
+they walked to the hospital yesterday .
+they are walking to the hospital now .
+every morning students walk to the hospital .
+students walked to the hospital yesterday .
+students are walking to the hospital now .
+every morning dogs walk to the hospital .
+dogs walked to the hospital yesterday .
+dogs are walking to the hospital now .
+every morning he walks to the store .
+last monday he walked to the store .
+he is walking to the store now .
+every morning she walks to the store .
+last monday she walked to the store .
+she is walking to the store now .
+every morning the teacher walks to the store .
+last monday the teacher walked to the store .
+the teacher is walking to the store now .
+every morning the driver walks to the store .
+last monday the driver walked to the store .
+the driver is walking to the store now .
+every morning the farmer walks to the store .
+last monday the farmer walked to the store .
+the farmer is walking to the store now .
+every morning the nurse walks to the store .
+last monday the nurse walked to the store .
+the nurse is walking to the store now .
+every morning we walk to the store .
+we walked to the store yesterday .
+we are walking to the store now .
+every morning they walk to the store .
+they walked to the store yesterday .
+they are walking to the store now .
+every morning students walk to the store .
+students walked to the store yesterday .
+students are walking to the store now .
+every morning dogs walk to the store .
+dogs walked to the store yesterday .
+dogs are walking to the store now .
+every morning he walks to the office .
+last monday he walked to the office .
+he is walking to the office now .
+every morning she walks to the office .
+last monday she walked to the office .
+she is walking to the office now .
+every morning the teacher walks to the office .
+last monday the teacher walked to the office .
+the teacher is walking to the office now .
+every morning the driver walks to the office .
+last monday the driver walked to the office .
+the driver is walking to the office now .
+every morning the farmer walks to the office .
+last monday the farmer walked to the office .
+the farmer is walking to the office now .
+every morning the nurse walks to the office .
+last monday the nurse walked to the office .
+the nurse is walking to the office now .
+every morning we walk to the office .
+we walked to the office yesterday .
+we are walking to the office now .
+every morning they walk to the office .
+they walked to the office yesterday .
+they are walking to the office now .
+every morning students walk to the office .
+students walked to the office yesterday .
+students are walking to the office now .
+every morning dogs walk to the office .
+dogs walked to the office yesterday .
+dogs are walking to the office now .
+every morning he walks to the bank .
+last monday he walked to the bank .
+he is walking to the bank now .
+every morning she walks to the bank .
+last monday she walked to the bank .
+she is walking to the bank now .
+every morning the teacher walks to the bank .
+last monday the teacher walked to the bank .
+the teacher is walking to the bank now .
+every morning the driver walks to the bank .
+last monday the driver walked to the bank .
+the driver is walking to the bank now .
+every morning the farmer walks to the bank .
+last monday the farmer walked to the bank .
+the farmer is walking to the bank now .
+every morning the nurse walks to the bank .
+last monday the nurse walked to the bank .
+the nurse is walking to the bank now .
+every morning we walk to the bank .
+we walked to the bank yesterday .
+we are walking to the bank now .
+every morning they walk to the bank .
+they walked to the bank yesterday .
+they are walking to the bank now .
+every morning students walk to the bank .
+students walked to the bank yesterday .
+students are walking to the bank now .
+every morning dogs walk to the bank .
+dogs walked to the bank yesterday .
+dogs are walking to the bank now .
+yesterday ruth played near the garden .
+ruth played at the school last monday .
+yesterday ruth worked near the garden .
+ruth worked at the school last monday .
+yesterday ruth rested near the garden .
+ruth rested at the school last monday .
+yesterday ruth talked near the garden .
+ruth talked at the school last monday .
+yesterday ruth jumped near the garden .
+ruth jumped at the school last monday .
+yesterday ruth walked near the garden .
+ruth walked at the school last monday .
+yesterday ben played near the garden .
+ben played at the school last monday .
+yesterday ben worked near the garden .
+ben worked at the school last monday .
+yesterday ben rested near the garden .
+ben rested at the school last monday .
+yesterday ben talked near the garden .
+ben talked at the school last monday .
+yesterday ben jumped near the garden .
+ben jumped at the school last monday .
+yesterday ben walked near the garden .
+ben walked at the school last monday .
+yesterday iris played near the garden .
+iris played at the school last monday .
+yesterday iris worked near the garden .
+iris worked at the school last monday .
+yesterday iris rested near the garden .
+iris rested at the school last monday .
+yesterday iris talked near the garden .
+iris talked at the school last monday .
+yesterday iris jumped near the garden .
+iris jumped at the school last monday .
+yesterday iris walked near the garden .
+iris walked at the school last monday .
+yesterday sam played near the garden .
+sam played at the school last monday .
+yesterday sam worked near the garden .
+sam worked at the school last monday .
+yesterday sam rested near the garden .
+sam rested at the school last monday .
+yesterday sam talked near the garden .
+sam talked at the school last monday .
+yesterday sam jumped near the garden .
+sam jumped at the school last monday .
+yesterday sam walked near the garden .
+sam walked at the school last monday .

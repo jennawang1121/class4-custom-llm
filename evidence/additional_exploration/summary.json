@@ -1,0 +1,52 @@
+[
+  {
+    "experiment": "phrasing",
+    "prompt": "last monday she walked to the",
+    "temperature": 0.8,
+    "samples": 5,
+    "distinct_full_continuations": 4,
+    "distinct_generated_token_types": 5,
+    "empty_responses": 0,
+    "unknown_prompt_words": []
+  },
+  {
+    "experiment": "phrasing",
+    "prompt": "she walked last monday to the",
+    "temperature": 0.8,
+    "samples": 5,
+    "distinct_full_continuations": 4,
+    "distinct_generated_token_types": 5,
+    "empty_responses": 0,
+    "unknown_prompt_words": []
+  },
+  {
+    "experiment": "temperature",
+    "prompt": "the customer",
+    "temperature": 0.3,
+    "samples": 5,
+    "distinct_full_continuations": 5,
+    "distinct_generated_token_types": 12,
+    "empty_responses": 0,
+    "unknown_prompt_words": []
+  },
+  {
+    "experiment": "temperature",
+    "prompt": "the customer",
+    "temperature": 0.8,
+    "samples": 5,
+    "distinct_full_continuations": 4,
+    "distinct_generated_token_types": 13,
+    "empty_responses": 0,
+    "unknown_prompt_words": []
+  },
+  {
+    "experiment": "temperature",
+    "prompt": "the customer",
+    "temperature": 1.2,
+    "samples": 5,
+    "distinct_full_continuations": 4,
+    "distinct_generated_token_types": 14,
+    "empty_responses": 0,
+    "unknown_prompt_words": []
+  }
+]

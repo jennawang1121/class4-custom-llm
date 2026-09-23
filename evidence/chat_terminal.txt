@@ -1,0 +1,12 @@
+number of parameters: 0.11M
+Tiny language model: short continuations, not a general assistant.
+Each prompt starts fresh. Context: 48 tokens. Type /quit to exit.
+You: the customer
+Model: compared the package after checking the price .
+You: last monday she
+Model: walked to the store .
+You: Can you explain quantum computing?
+Model: store has a question about the different shopper and the local buyer and the different shopper and the support with another subscriber and the
+Unknown words: ?, can, computing, explain, quantum, you
+You: /quit
+Saved transcript: evidence/chat_transcript.json
