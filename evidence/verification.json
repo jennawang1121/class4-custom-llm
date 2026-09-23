@@ -56,7 +56,7 @@
     "model_identity_matches": true,
     "terminal_recording_contains_all_prompts_and_replies": true
   },
-  "public_repository_verified": false,
+  "public_repository_verified": true,
   "student_reflection_complete": true,
   "links": {
     "missing": [],

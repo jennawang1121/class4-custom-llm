@@ -6,6 +6,6 @@ The original formal runs are preserved. Isolated reproduction commands prevent n
 
 Reflection: updated from the student’s learning conversation and approved wording in REFLECTION.md.
 
-Published: https://github.com/jennawang1121/class4-custom-llm . Public downloads, README and plots verified. GitHub notebook iframe preview remained loading; downloadable executed notebooks are intact. Pending: course portal submission and a later visual check of GitHub notebook preview.
+Published: https://github.com/jennawang1121/class4-custom-llm . Public downloads, README and plots verified. Both native GitHub notebook previews rendered with saved outputs and SVG plots. Pending: manual local embedding-viewer walkthrough and course portal submission.
 
 All tests, outputs, reports, and chat evidence remain outside corpus/. No score threshold is treated as an assignment-grade requirement.

@@ -35,7 +35,8 @@ assert t['model_sha256']==read(f"llm_runs/{runs['expanded']}/language_evals/fina
 events=[json.loads(l) for l in (ROOT/'evidence/chat_session.cast').read_text().splitlines()]; recorded=''.join(e[2] for e in events[1:])
 for turn in t['turns']:assert turn['prompt'] in recorded and turn['response'] in recorded
 report['chat']={'actual_turns':3,'model_identity_matches':True,'terminal_recording_contains_all_prompts_and_replies':True}
-report['public_repository_verified']=False
+public=read('evidence/public_access_check.json')
+report['public_repository_verified']=all(public['browser_checks'].get(k,{}).get('rendered_signed_out',False) for k in ['starter_notebook_preview','expanded_notebook_preview'])
 report['student_reflection_complete']=True
 (ROOT/'evidence/verification.json').write_text(json.dumps(report,indent=2)+'\n')
 missing=[];ignored=[]

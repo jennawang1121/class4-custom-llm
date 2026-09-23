@@ -55,7 +55,7 @@ Audited against the instructor's full assignment text supplied on September 22, 
 - [x] Model downloads, four complete result sets, plots, reflection and chat source/evidence included.
 - [x] Public README and loss plots rendered while signed out.
 - [x] Added GitHub-readable [starter](evidence/notebook_exports/starter.md) and [expanded](evidence/notebook_exports/expanded.md) notebook exports containing every cell and saved output as backups.
-- [ ] **Native GitHub notebook preview:** the embedded notebook renderer remained loading during automated inspection. Raw files validate correctly and retain outputs. The backup exports make the evidence readable, but do not claim this exact preview requirement is verified. Open the two .ipynb pages in your browser and check their outputs before final submission.
+- [x] **Native GitHub notebook preview:** both executed notebooks rendered while signed out. The 3,000-step completion, final loss, final evaluation, vector outputs and one SVG figure in each were verified. Initial loading delays resolved.
 - [ ] **Local embedding-viewer walkthrough:** all numeric initial/final vectors and cosine neighbors were checked, but the automated browser blocked the local file URL. Open embedding-viewer.html yourself and load a saved checkpoint.json; compare customer before/after. Interactive viewer use is not claimed verified.
 - [ ] **Course portal submission:** paste the public repository URL into the assignment submission portal. Publication is not the same as portal submission.
 

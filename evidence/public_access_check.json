@@ -109,11 +109,26 @@
       "bytes": 38673
     }
   ],
-  "note": "Checks verify public availability and saved notebook outputs; GitHub notebook UI rendering is separate.",
+  "note": "Native GitHub notebook previews initially loaded slowly; both later rendered their saved outputs and SVG figures while signed out. Raw-download checks above are an earlier publication snapshot; notebook additions contain only explanations/metadata, with executed code and outputs unchanged.",
   "browser_checks": {
     "signed_out_repository_page": true,
     "readme_rendered": true,
     "both_loss_images_loaded": true,
-    "expanded_notebook_preview": "GitHub page is public; embedded renderer remained blank/loading during inspection. Raw notebook download and all saved outputs verified."
+    "expanded_notebook_preview": {
+      "rendered_signed_out": true,
+      "completed_3000_steps_visible": true,
+      "final_loss_visible": true,
+      "final_eval_visible": true,
+      "initial_vector_visible": true,
+      "svg_figure_count": 1
+    },
+    "starter_notebook_preview": {
+      "rendered_signed_out": true,
+      "completed_3000_steps_visible": true,
+      "final_loss_visible": true,
+      "final_eval_visible": true,
+      "initial_vector_visible": true,
+      "svg_figure_count": 1
+    }
   }
 }
